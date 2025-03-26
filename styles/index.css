@@ -1,5 +1,26 @@
+* {
+    margin: 0;
+    font-family: Verdana;
+}
 #navbar {
     display: inline-block;
     width: 100%;
     background-color: #A6B37D;
+    padding: 15px;
+}
+
+#navbar a {
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: #C0C78C;
+    border-radius: 25px;
+    width: 5em;
+    text-align: center;
+}
+
+#navbar a:hover {
+    background-color: #B99470;
 }
