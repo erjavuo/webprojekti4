@@ -24,3 +24,7 @@
 #navbar a:hover {
     background-color: #B99470;
 }
+
+a:visited {
+    color: black;
+}
