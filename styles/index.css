@@ -25,3 +25,12 @@ body {
 #navbar a:hover {
     background-color: #B99470;
 }
+
+footer {
+    background-color: #A6B37D;
+    padding: 7px;
+}
+
+footer p {
+    text-align: center;
+}
