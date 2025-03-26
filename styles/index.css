@@ -34,3 +34,29 @@ footer {
 footer p {
     text-align: center;
 }
+
+img {
+
+    max-width: 100%;
+    border: 6px solid;
+    border-radius: 30px;
+    border-color: #A6B37D;
+    
+
+    
+    }
+
+.etusivukuva{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    
+    
+
+    }
+
+.tekstit{
+    text-align: center;
+    
+
+}
