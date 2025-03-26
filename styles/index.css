@@ -1,16 +1,16 @@
-* {
+body {
+    padding: 0;
+    margin: 0;
     background-color: #FEFAE0;
     font-family: Verdana;
 }
 #navbar {
-    display: inline-block;
-    width: 100%;
     background-color: #A6B37D;
     padding: 15px;
 }
 
 #navbar a {
-    float: left;
+    display: inline-block;
     padding: 10px;
     margin: 10px;
     text-decoration: none;
