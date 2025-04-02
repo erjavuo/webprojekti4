@@ -7,11 +7,24 @@
 
 #start-game-screen {
     text-align: center;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 10px;
+}
+
+.end-screen {
+    display: none;
+    text-align: center;
+    
 }
 
 .play-button {
+    background-color: #A6B37D;
+    width: 6em;
+    height: 3em;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.play-again {
     background-color: #A6B37D;
     width: 6em;
     height: 3em;
@@ -25,6 +38,7 @@ h2 {
 
 p {
     text-align: center;
+    font-weight: bold;
 }
 
 img {
