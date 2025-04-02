@@ -48,7 +48,7 @@ p{
 
 footer{
 
-    margin-top: 300px;
+    margin-top: 115px;
 
 
 
@@ -57,5 +57,16 @@ footer{
 #navbar{
 
     font-size: 2.1vh;
+
+}
+
+#coverpicture{
+    width: 16%;
+    min-width: 10%;
+    display: block;
+    margin: 0 auto;
+    
+    border-color: black;
+    margin-top: 15px;
 
 }
