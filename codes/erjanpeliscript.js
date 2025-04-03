@@ -1,4 +1,4 @@
-// Game data - animals with their answers (true = found in Finland, false = not found)
+// Game data - animals with their answers
 const animals = [
     { image: 'images/erjanpeli_images/hirvi.jpg', answer: true },
     { image: 'images/erjanpeli_images/susi.jpg', answer: true },
