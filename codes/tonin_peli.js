@@ -5,13 +5,14 @@ const playerScore = document.querySelector(".score");
 const playButton = document.querySelector(".play-button");
 const resetButton = document.querySelector(".play-again")
 const playerTries = document.querySelector(".tries");
+const gameStats = document.querySelector(".game-stats");
 const divs = gameContainer.getElementsByTagName("div");
 let cards = [];
 let cardElements = [];
 let firstCard, secondCard;
 let lockTheGame = false;
 let score = 0;
-let tries = 15;
+let tries = 10;
 document.querySelector(".score").textContent = score;
 document.querySelector(".tries").textContent = tries;
 
@@ -23,6 +24,7 @@ generateCards();
 playButton.addEventListener("click", () => {
     startScreen.style.display = "none";
     gameContainer.style.display = "grid";
+    gameStats.style.display = "block";
 });
 
 resetButton.addEventListener("click", resetGame);
@@ -129,7 +131,7 @@ function resetCards() {
 // Cleans everything and starts game again.
 function resetGame() {
     score = 0;
-    tries = 15;
+    tries = 10;
     cards = [];
     cardElements = [];
     sessionStorage.removeItem("memoryGamePoints")
@@ -150,6 +152,7 @@ function endGame() {
         setTimeout(() => {
             gameContainer.style.display = "none";
             endScreen.style.display = "block";
+            gameStats.style.display = "none";
         },1000);
     };
 };
