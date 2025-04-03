@@ -1,10 +1,10 @@
 const gameContainer = document.querySelector("#game-container");
 const startScreen = document.querySelector("#start-game-screen");
 const endScreen = document.querySelector(".end-screen");
-const playerScore = document.querySelector(".score");
+const playerScore = document.getElementsByClassName("score");
 const playButton = document.querySelector(".play-button");
-const resetButton = document.querySelector(".play-again")
-const playerTries = document.querySelector(".tries");
+const resetButton = document.querySelector(".play-again");
+const playerTries = document.getElementsByClassName("tries");
 const gameStats = document.querySelector(".game-stats");
 const divs = gameContainer.getElementsByTagName("div");
 let cards = [];
@@ -13,13 +13,32 @@ let firstCard, secondCard;
 let lockTheGame = false;
 let score = 0;
 let tries = 10;
-document.querySelector(".score").textContent = score;
-document.querySelector(".tries").textContent = tries;
+
+
+playerScore.textContent = score;
+playerTries.textContent = tries;
+
 
 
 createCards();
 shuffleCards();
 generateCards();
+addPlayerScore(score);
+addPlayerTries(tries);
+
+// Adds score value to all elements with .score class name.
+function addPlayerScore(score) {
+    for (let i = 0; i < playerScore.length; i++) {
+        playerScore[i].textContent = score;
+    };
+};
+
+// Add tries value to all elements with tries class name.
+function addPlayerTries(tries) {
+    for (let i = 0; i < playerTries.length; i++) {
+        playerTries[i].textContent = tries;
+    };
+};
 
 playButton.addEventListener("click", () => {
     startScreen.style.display = "none";
@@ -92,21 +111,23 @@ function checkIfMatching() {
     if (isMatch) {
         score+=2;
         tries--;
-        document.querySelector(".tries").textContent = tries;
-        document.querySelector(".score").textContent = score;
-        sessionStorage.setItem("memoryGamePoints", score) // Add points to session storage.
+        addPlayerScore(score);
+        addPlayerTries(tries);
+        playerTries.textContent = tries;
+        playerScore.textContent = score;
+        sessionStorage.setItem("memoryGamePoints", score); // Add points to session storage.
         disableCards();
     } else {
         tries--;
-        document.querySelector(".tries").textContent = tries;
+        addPlayerTries(tries);
         unflipCards();
     };
 };
 
 // When the player gets same pair of cards, the function disables the click event of the cards.
 function disableCards() {
-    firstCard.removeEventListener("click", flipCard)
-    secondCard.removeEventListener("click", flipCard)
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
     resetCards();
 };
 
@@ -118,7 +139,7 @@ function unflipCards() {
     setTimeout(() => {
         firstCardimg[0].src = cards[cardElements.indexOf(firstCard)].backimg;
         secondCardimg[0].src = cards[cardElements.indexOf(secondCard)].backimg;
-        resetCards()
+        resetCards();
     }, 1000);
 };
 
@@ -134,14 +155,15 @@ function resetGame() {
     tries = 10;
     cards = [];
     cardElements = [];
-    sessionStorage.removeItem("memoryGamePoints")
-    document.querySelector(".tries").textContent = tries;
-    document.querySelector(".score").textContent = score;
-    endScreen.style.display = "none"
+    sessionStorage.removeItem("memoryGamePoints");
+    addPlayerScore(score);
+    addPlayerTries(tries);
+    endScreen.style.display = "none";
+    gameStats.style.display = "block";
     gameContainer.style.display = "grid";
     gameContainer.innerHTML = "";
     resetCards();
-    createCards()
+    createCards();
     shuffleCards();
     generateCards();
 };
@@ -150,6 +172,11 @@ function resetGame() {
 function endGame() {
     if (score === 10 || tries === 0) {
         setTimeout(() => {
+            document.querySelector(".score").display = "none";
+            document.querySelector(".points-text").textContent = `Sait ${score} pistettä!`;
+            if (tries === 0 && score < 10) {
+                document.querySelector(".tries-text").textContent = "Yritykset loppuivat";
+            };
             gameContainer.style.display = "none";
             endScreen.style.display = "block";
             gameStats.style.display = "none";
