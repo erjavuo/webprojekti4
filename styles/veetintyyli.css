@@ -30,6 +30,9 @@ body {
 footer {
     background-color: #A6B37D;
     padding: 7px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 footer p {
@@ -38,7 +41,7 @@ footer p {
 
 img {
 
-    max-width: 80%;
+    max-width: 20%;
     border: 6px solid;
     border-radius: 30px;
     border-color: #A6B37D;
