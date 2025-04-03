@@ -1,11 +1,11 @@
 const gameContainer = document.querySelector("#game-container");
 const startScreen = document.querySelector("#start-game-screen");
 const endScreen = document.querySelector(".end-screen");
-const playerScore = document.getElementsByClassName("score");
 const playButton = document.querySelector(".play-button");
 const resetButton = document.querySelector(".play-again");
-const playerTries = document.getElementsByClassName("tries");
 const gameStats = document.querySelector(".game-stats");
+const playerScore = document.getElementsByClassName("score");
+const playerTries = document.getElementsByClassName("tries");
 const divs = gameContainer.getElementsByTagName("div");
 let cards = [];
 let cardElements = [];
@@ -13,12 +13,6 @@ let firstCard, secondCard;
 let lockTheGame = false;
 let score = 0;
 let tries = 10;
-
-
-playerScore.textContent = score;
-playerTries.textContent = tries;
-
-
 
 createCards();
 shuffleCards();
@@ -33,7 +27,7 @@ function addPlayerScore(score) {
     };
 };
 
-// Add tries value to all elements with tries class name.
+// Adds tries value to all elements with tries class name.
 function addPlayerTries(tries) {
     for (let i = 0; i < playerTries.length; i++) {
         playerTries[i].textContent = tries;
@@ -113,9 +107,7 @@ function checkIfMatching() {
         tries--;
         addPlayerScore(score);
         addPlayerTries(tries);
-        playerTries.textContent = tries;
-        playerScore.textContent = score;
-        sessionStorage.setItem("memoryGamePoints", score); // Add points to session storage.
+        sessionStorage.setItem("memoryGamePoints", score); // Adds points to the session storage.
         disableCards();
     } else {
         tries--;
@@ -175,7 +167,7 @@ function endGame() {
             document.querySelector(".score").display = "none";
             document.querySelector(".points-text").textContent = `Sait ${score} pistettä!`;
             if (tries === 0 && score < 10) {
-                document.querySelector(".tries-text").textContent = "Yritykset loppuivat";
+                document.querySelector(".tries-text").textContent = "Yritykset loppuivat.";
             };
             gameContainer.style.display = "none";
             endScreen.style.display = "block";

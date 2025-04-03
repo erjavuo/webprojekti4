@@ -85,9 +85,6 @@ width: 180px;
         grid-gap: 16px;
         grid-template-columns: repeat(2,150px);
     }
-    .end-screen {
-
-    }
 
     .card {
         background-color: white;
