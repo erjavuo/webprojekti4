@@ -1,15 +1,15 @@
 // Game data - animals with their answers
 const animals = [
-    { image: 'images/erjanpeli_images/hirvi.jpg', answer: true },
-    { image: 'images/erjanpeli_images/susi.jpg', answer: true },
-    { image: 'images/erjanpeli_images/gorilla.jpg', answer: false },
-    { image: 'images/erjanpeli_images/kettu.jpg', answer: true },
-    { image: 'images/erjanpeli_images/orava.jpg', answer: true },
-    { image: 'images/erjanpeli_images/leijona.jpg', answer: false },
-    { image: 'images/erjanpeli_images/ilves.jpg', answer: true },
-    { image: 'images/erjanpeli_images/karhu.jpg', answer: true },
-    { image: 'images/erjanpeli_images/janis.jpg', answer: true },
-    { image: 'images/erjanpeli_images/kenguru.jpg', answer: false }
+    { image: '../images/erjanpeli_images/hirvi.jpg', answer: true },
+    { image: '../images/erjanpeli_images/susi.jpg', answer: true },
+    { image: '../images/erjanpeli_images/gorilla.jpg', answer: false },
+    { image: '../images/erjanpeli_images/kettu.jpg', answer: true },
+    { image: '../images/erjanpeli_images/orava.jpg', answer: true },
+    { image: '../images/erjanpeli_images/leijona.jpg', answer: false },
+    { image: '../images/erjanpeli_images/ilves.jpg', answer: true },
+    { image: '../images/erjanpeli_images/karhu.jpg', answer: true },
+    { image: '../images/erjanpeli_images/janis.jpg', answer: true },
+    { image: '../images/erjanpeli_images/kenguru.jpg', answer: false }
 ];
 
 // Game state
