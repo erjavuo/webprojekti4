@@ -1,0 +1,131 @@
+button{
+
+    margin-top: 3%;
+    max-width: 100%;
+    min-width: 15%;
+    height: 35px;
+    background-color: #A6B37D;;
+    align-items: center;
+    font-size: large;
+    border-radius: 3px;
+    border: 3px solid;
+    
+    
+
+}
+
+.button{
+    
+    display:inline-block;
+    
+    padding-left: 38%;
+    padding-top: 3%;
+
+
+}
+
+.button2{
+
+    display:inline-block;
+    padding-right: 3%;
+    
+
+}
+
+.buttons{
+
+display: flex;
+justify-content: space-between;
+width: 25%;
+padding-left: 35%;
+
+}
+
+.button button:hover{
+
+ background-color: #B99470;
+
+}
+
+
+
+
+
+h2{
+
+padding-bottom: 1vh;
+font-size: 3vh;
+
+}
+
+p{
+
+ font-size: 2.2vh;
+
+}
+
+
+
+
+
+footer{
+
+ margin-top: 240px;
+
+
+
+}
+
+#navbar{
+
+ font-size: 2.1vh;
+
+}
+
+#coverpicture{
+ width: 16%;
+ min-width: 10%;
+ display: block;
+ margin: 0 auto;
+ 
+ border-color: black;
+ margin-top: 15px;
+
+}
+
+img{
+
+    display: inline-block;
+
+}
+
+#img1{
+
+    width: 20%;
+    
+
+}
+
+#img2{
+
+    width: 20%;
+    margin-left: 10%;
+
+}
+
+#img3{
+
+    width: 17%;
+
+}
+
+#img4{
+
+    width: 17%;
+
+}
+
+.birds{
+   margin-left: 30%;
+
+}
