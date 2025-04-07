@@ -18,6 +18,9 @@ pic1.addEventListener('click', setrandomImageBirds);
 pic2.addEventListener('click', setrandomImageBirds);
 but3.addEventListener('click', setrandomImageBirds);
 
+pic1.addEventListener('click', CountTries);
+pic2.addEventListener('click', CountTries);
+
 //Function that will get the h2 element from the html and shows the category according the current number of index element
 function setCategories(){
 
@@ -46,6 +49,7 @@ function ShowImages(){
 function setrandomImageBirds(){
 
     
+   
 
     if(index === 0){
 
@@ -113,6 +117,39 @@ function ContinuetoNextCategory(){
         
 
     }
+
+
+    }
+
+
+// This function will count all the tries when user clicks the "Kuva 1" or "Kuva 2" buttons, increasing the tries each time by 1
+function CountTries(){
+
+    if(index === 0){
+
+        tries++;
+
+
+    }
+    else if(index === 1){
+
+        tries++;
+
+
+    }
+
+    else if(index === 2){
+
+        tries++;
+
+    }
+
+    if(tries === 10){
+
+        location.reload();
+
+    }
+
 
 
     }
