@@ -3,7 +3,7 @@ var categoryquestion = document.getElementById('question');
 let i = 1;
 let index = 0;
 let tries = 0;
-
+let points1 = 0;
 
 
 
@@ -13,13 +13,22 @@ let but3 = document.getElementById('but3');
 let images = document.getElementsByTagName('img');
 let img1 = document.getElementById('img1');
 let img2 = document.getElementById('img2');
+let points = document.getElementById('points');
+let pic11 = document.getElementById('pic1');
+let pic22 = document.getElementById('pic2');
+
+
 
 pic1.addEventListener('click', setrandomImageBirds);
 pic2.addEventListener('click', setrandomImageBirds);
 but3.addEventListener('click', setrandomImageBirds);
+pic1.addEventListener('click', CountPoints);
+pic2.addEventListener('click', CountPoints);
 
-pic1.addEventListener('click', CountTries);
-pic2.addEventListener('click', CountTries);
+
+pic11.addEventListener('click', CountTries);
+pic22.addEventListener('click', CountTries);
+ 
 
 //Function that will get the h2 element from the html and shows the category according the current number of index element
 function setCategories(){
@@ -33,14 +42,11 @@ function setCategories(){
 
 
 
-function ShowImages(){
 
 
-    img1.src=('../images/rasmuksenpelin_kuvat/Birds/0a.jpg');
-    img2.src=('../images/rasmuksenpelin_kuvat/forest animals/fox-4589927_1280.jpg');
 
 
-}
+
 
 
 
@@ -54,7 +60,7 @@ function setrandomImageBirds(){
     if(index === 0){
 
 
-        var listbirds2=["../images/rasmuksenpelin_kuvat/Birds/0a.jpg", "../images/rasmuksenpelin_kuvat/Birds/0b.jpg", "../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/Birds/0d.jpg"];
+        var listbirds=["../images/rasmuksenpelin_kuvat/Birds/0a.jpg", "../images/rasmuksenpelin_kuvat/Birds/0b.jpg", "../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/Birds/0d.jpg"];
         var randomNumberbirds = Math.ceil(Math.random() * 3);
         img1.src=listbirds[randomNumberbirds];
 
@@ -63,7 +69,7 @@ function setrandomImageBirds(){
         img2.src=listbirds2[randomNumberbirds2];
 
 
-        }
+    }
 
     else if(index === 1){
 
@@ -92,10 +98,51 @@ function setrandomImageBirds(){
 
 
     }
+        
+
+    
+
+    
+
+
+
+    
     
 
 }
-// This function will continue to next category if category index is less or equal than 2, if not it will return back to "linnut" category
+
+function CountPoints(){
+    
+    
+    if(pic2.click && index === 1 ){
+        points1++;
+        
+         alert('toimii1')  ;
+            
+    
+    
+    }
+    else if(index === 1 && pic1.click){
+
+        alert('ei pisteitä');
+
+    }
+    else{
+
+        alert('no points!');
+
+    }
+    
+    
+    points.textContent = points1;
+
+    
+        
+    
+    
+    
+} 
+// This function will continue to next category if category index is less than 2, if not it will return back to "linnut" category
 function ContinuetoNextCategory(){
 
 
@@ -119,8 +166,9 @@ function ContinuetoNextCategory(){
     }
 
 
-    }
+}
 
+   
 
 // This function will count all the tries when user clicks the "Kuva 1" or "Kuva 2" buttons, increasing the tries each time by 1
 function CountTries(){
@@ -152,7 +200,11 @@ function CountTries(){
 
 
 
-    }
+}
+
+
+
+ 
 
 
 
