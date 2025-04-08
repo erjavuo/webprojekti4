@@ -33,6 +33,14 @@
     font-size: 1em;
 }
 
+.play-button:hover {
+    cursor: pointer;
+}
+
+.play-again:hover {
+    cursor: pointer;
+}
+
 .play-again {
     background-color: #A6B37D;
     width: 10em;
@@ -64,6 +72,10 @@ margin: 10px;
 border-radius: 30px;
 height: calc(120px / 2 * 3);
 width: 180px;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .game-stats {
