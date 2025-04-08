@@ -1,0 +1,1 @@
+const memoryGamePoints = sessionStorage.getItem("memoryGamePoints");
