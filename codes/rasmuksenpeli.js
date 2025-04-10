@@ -1,6 +1,6 @@
 var categories = ['Linnut', 'Kalat', 'Metsäneläimet'];
 var categoryquestion = document.getElementById('question');
-let i = 1;
+let disable = 0;
 let index = 0;
 let tries = 0;
 let points1 = 0;
@@ -22,6 +22,7 @@ let pic22 = document.getElementById('pic2');
 pic1.addEventListener('click', setrandomImageBirds);
 pic2.addEventListener('click', setrandomImageBirds);
 but3.addEventListener('click', setrandomImageBirds);
+
 pic1.addEventListener('click', CountPoints);
 pic2.addEventListener('click', CountPoints);
 
@@ -36,10 +37,42 @@ pic22.addEventListener('click', CountTries);
 //Function that will get the h2 element from the html and shows the category according the current number of index element
 function setCategories(){
 
+    disable++;
 
     categoryquestion.textContent = categories[index];
 
+
     
+
+
+}
+
+DisableEnableButtons();
+
+
+function DisableEnableButtons(){
+
+
+    if(disable === 0){
+
+        pic1.disabled = true;
+        pic2.disabled = true;
+
+
+    }
+    else{
+
+        pic1.disabled = false;
+        pic2.disabled = false;
+
+    }
+
+    if(disable > 0){
+
+        but3.disabled = true;
+
+    }
+
 
 
 }
@@ -268,6 +301,8 @@ function CountPoints(){
      
       
 } 
+
+
 
 
 
