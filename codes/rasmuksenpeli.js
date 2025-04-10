@@ -28,22 +28,21 @@ pic2.addEventListener('click', CountPoints);
 
 pic11.addEventListener('click', CountTries);
 pic22.addEventListener('click', CountTries);
- 
+
+
+
+
 
 //Function that will get the h2 element from the html and shows the category according the current number of index element
 function setCategories(){
 
+
     categoryquestion.textContent = categories[index];
 
+    
 
 
 }
-
-
-
-
-
-
 
 
 
@@ -60,6 +59,7 @@ function setrandomImageBirds(){
     if(index === 0){
 
 
+
         var listbirds=["../images/rasmuksenpelin_kuvat/Birds/0a.jpg", "../images/rasmuksenpelin_kuvat/Birds/0b.jpg", "../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/Birds/0d.jpg"];
         var randomNumberbirds = Math.ceil(Math.random() * 3);
         img1.src=listbirds[randomNumberbirds];
@@ -69,9 +69,9 @@ function setrandomImageBirds(){
         img2.src=listbirds2[randomNumberbirds2];
 
 
-    }
+    } else if(index === 1){
 
-    else if(index === 1){
+        
 
 
         var listfishes=["../images/rasmuksenpelin_kuvat/fishes/perch-7521273_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/pike-2276178_1280.jpg","../images/rasmuksenpelin_kuvat/fishes/salmon-3704543_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/trout.jpg"];
@@ -82,10 +82,10 @@ function setrandomImageBirds(){
         var randomNumberfishes2 = Math.ceil(Math.random()* 3);
         img2.src=listfishes2[randomNumberfishes2];
 
-    }
+    } else if (index === 2){
 
+        
 
-    else if (index === 2){
 
         var listanimals=["../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/Birds/0b.jpg","../images/rasmuksenpelin_kuvat/fishes/pike-2276178_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/trout.jpg"];
         var randomNumberanimals = Math.ceil(Math.random() * 3);
@@ -111,48 +111,18 @@ function setrandomImageBirds(){
 
 }
 
-function CountPoints(){
-    
-    
-    if(pic2.click && index === 1 ){
-        points1++;
-        
-         alert('toimii1')  ;
-            
-    
-    
-    }
-    else if(index === 1 && pic1.click){
 
-        alert('ei pisteitä');
 
-    }
-    else{
-
-        alert('no points!');
-
-    }
-    
-    
-    points.textContent = points1;
-
-    
-        
-    
-    
-    
-} 
 // This function will continue to next category if category index is less than 2, if not it will return back to "linnut" category
 function ContinuetoNextCategory(){
 
 
     if(index < 2){
 
-
+        index++;
 
         document.getElementById("question").innerHTML = categories[index];
 
-        index++;
 
     }
 
@@ -167,6 +137,7 @@ function ContinuetoNextCategory(){
 
 
 }
+
 
    
 
@@ -201,6 +172,102 @@ function CountTries(){
 
 
 }
+
+function CountPoints(){
+
+    categoryquestion.textContent = categories[index];
+
+
+    pic2.onclick = function() {
+          if(index === 2){
+                points1++;
+                
+              
+                
+              
+                points.textContent = points1;
+              
+
+              
+      
+            }else if(index === 1){
+
+                points1++;
+
+
+                points.textContent = points1;
+
+
+            }
+            
+            
+            
+            else{
+                alert('ei pisteitä!');
+                
+
+                
+  
+                points.textContent = points1; 
+  
+  
+            }
+  
+    }
+
+    pic1.onclick = function() {
+            if(index === 2){
+                
+                alert('no points!')
+
+                
+        
+        
+                points.textContent = points1; 
+
+            }
+            else if(index === 0){
+                
+                
+                points1++;
+
+                
+
+                points.textContent = points1; 
+
+
+            }
+            else{
+
+                alert('ei pisteitäää');
+
+                points.textContent = points1; 
+
+
+            }
+
+    }
+
+    if(index < 2){
+
+        index++;
+
+
+    }
+
+    else{
+
+        index = 0;
+        
+        
+        
+
+    }
+     
+      
+     
+      
+} 
 
 
 
