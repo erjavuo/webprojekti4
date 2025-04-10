@@ -31,6 +31,27 @@ button{
 
 }
 
+#points2{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4%;
+    
+
+
+}
+
+#points{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4%;  
+
+    
+}
+
 .button2{
 
     display:inline-block;
