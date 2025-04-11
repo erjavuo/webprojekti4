@@ -1,4 +1,4 @@
-// Game data - animals with their answers
+// Game data - animals and answers
 const animals = [
     { image: '../images/erjanpeli_images/hirvi.jpg', answer: true },
     { image: '../images/erjanpeli_images/susi.jpg', answer: true },
