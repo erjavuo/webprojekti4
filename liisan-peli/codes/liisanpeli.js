@@ -1,15 +1,15 @@
 // Alkuperäiset vesistöt ja niiden sekoitukset
 const finnishWaters = [
-    { name: 'Kemijoki', mixed: 'Keijo kim' },
-    { name: 'Tornionjoki', mixed: 'Trikoo jonni' },
-    { name: 'Kalajoki', mixed: 'laKki ajo' },
-    { name: 'Aurajoki', mixed: 'Aika rujo' },
-    { name: 'Muonionjoki', mixed: 'kiMono jouni' },
-    { name: 'Saimaa', mixed: 'maaSai' },
-    { name: 'Päijänne', mixed: 'Penni jää' },
-    { name: 'Oulujärvi', mixed: 'väli juOru' },
-    { name: 'Keitele', mixed: 'ele itKe' },
-    { name: 'Pielinen', mixed: 'Pinni ele' }
+    { name: 'Kemijoki', mixed: 'Keijo kim', image: '../images/kemijoki.jpg' },
+    { name: 'Tornionjoki', mixed: 'Trikoo jonni', image: '../images/Tornionjoki_wikimedia_commons_mainitse_kuvaaja_ym_lahteet.jpg' },
+    { name: 'Kalajoki', mixed: 'laKki ajo', image: '../images/kalajoki.jpg' },
+    { name: 'Aurajoki', mixed: 'Aika rujo', image: '../images/aurajoki.jpg' },
+    { name: 'Muonionjoki', mixed: 'kiMono jouni', image: '../images/muonionjoki_wikimedia_commons_mainitse_kuvaaja_ym_lahteet.jpg' },
+    { name: 'Saimaa', mixed: 'maaSai', image: '../images/saimaa.jpg' },
+    { name: 'Päijänne', mixed: 'Penni jää', image: '../images/lake-paijanne-7366872_640.jpg' },
+    { name: 'Oulujärvi', mixed: 'väli juOru', image: '../images/lake-oulu.jpg' },
+    { name: 'Keitele', mixed: 'ele itKe', image: '../images/lake-keitele_goodfreephotos_mainitse.jpg' },
+    { name: 'Pielinen', mixed: 'Pinni ele', image: '../images/pielinen.jpg' }
 ];
 
 let currentWater = {};
@@ -22,8 +22,14 @@ function getNextWater() {
     if (currentIndex < finnishWaters.length) {
         currentWater = finnishWaters[currentIndex];
         currentIndex++;
+
+        // Päivitä kuva tähän!
+        const imageElement = document.getElementById("water-image");
+        imageElement.src = currentWater.image;
+        imageElement.classList.remove("hidden");
+
     } else {
-        gameOver = true; // Peli päättyy, kun kaikki sanat on käyty läpi
+        gameOver = true;
     }
 }
 
@@ -93,3 +99,4 @@ document.getElementById("new-game-button").addEventListener("click", startNewGam
 
 // Aloitetaan peli
 startNewGame();
+

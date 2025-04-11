@@ -7,10 +7,27 @@
     text-align: center;
 }
 
-#letters {
+#mixed-word {
     font-weight: bold;
     font-style: italic;
     font-size: larger;
+}
+
+#water-image {
+    width: 50%;
+    height: 30%;
+}
+
+#mixed-word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 #popup {
