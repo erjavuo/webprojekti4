@@ -1,0 +1,19 @@
+.peli-kooste {
+    width: 170px;
+    text-align: center;
+    margin: auto;
+}
+
+.peli-kooste img {
+    width: 150px;
+    border-radius: 80px;
+}
+
+.peli-kooste:hover img{
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

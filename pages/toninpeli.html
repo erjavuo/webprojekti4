@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/tonin_peli_styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Etusivu</a>
+        <a href="koostesivu.html">Pelit</a>
+        <a href="info.html">Info</a>
+    </div>
+    <h2>Muistipeli suomen kaloista</h2>
+    <div id="start-game-screen">
+        <h3>Tervetuloa pelaamaan muistipeliä suomen kaloista</h3>
+        <img src="../images/tonin_muistipeli/aloituskuva.jpg" alt="kala kuva">
+        <p>Tässä pelissä etsit pareja joistakin suomen kalalajeista.</p>
+        <p>Maksimi pistemäärä on 10 pistettä ja yrityksiä on 10.</p>
+        <button class="play-button">Pelaa</button>
+    </div>
+    <div id="game-container">
+    </div>
+    <div class="end-screen">
+        <h2>Peli loppui</h2>
+        <p class="points-text">Pisteet: <span class="score"></span></p>
+        <p class="tries-text">Yrityksiä jäi jäljelle: <span class="tries"></span></p>
+        <button class="play-again">Pelaa uudestaan</button>
+    </div>
+    <div class="game-stats">
+        <p>Pisteet: <span class="score"></span></p>
+        <p>Yrityksiä jäljellä: <span class="tries"></span></p>
+    </div>
+    <footer>
+        <p>Web-projekti, luontopelit, ryhmä 4</p>
+    </footer>
+    <script src="../codes/tonin_peli.js"></script>
+</body>
+</html>

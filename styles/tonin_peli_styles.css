@@ -1,0 +1,110 @@
+#game-container {
+    display: none;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(5,200px);
+    padding-bottom: 2em;
+}
+
+#start-game-screen {
+    text-align: center;
+    padding: 20px;
+}
+
+#start-game-screen img {
+    width: 600px;
+    border: 6px solid #A6B37D;
+    border-radius: 30px;
+}
+
+.end-screen {
+    position: relative;
+    display: none;
+    text-align: center;
+    padding: 2em;
+}
+
+.play-button {
+    background-color: #A6B37D;
+    width: 10em;
+    height: 4em;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.play-button:hover {
+    cursor: pointer;
+}
+
+.play-again:hover {
+    cursor: pointer;
+}
+
+.play-again {
+    background-color: #A6B37D;
+    width: 10em;
+    height: 4em;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+h2 {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#game-container img {
+    max-width: 60%;
+    padding: 2em;
+}
+
+.card {
+background-color: white;
+margin: 10px;
+border-radius: 30px;
+height: calc(120px / 2 * 3);
+width: 180px;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.game-stats {
+    display: none;
+}
+
+@media only screen and (max-width: 1064px) {
+    #game-container {
+        
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(2,200px);
+    }
+  }
+@media only screen and (max-width: 443px) {
+    #game-container {
+        
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(2,150px);
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 30px;
+        height: calc(84px / 2 * 3);
+        width: 120px;
+        }
+    #game-container img {
+        max-width: 40%;
+    }
+}
