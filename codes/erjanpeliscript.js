@@ -23,11 +23,15 @@ const totalProgress = document.getElementById('total');
 const pointsDisplay = document.getElementById('points');
 const yesBtn = document.getElementById('yes-btn');
 const noBtn = document.getElementById('no-btn');
+const endScreen = document.getElementById('end-screen');
+const scoreDisplay = document.getElementById('score-display');
 
 // Initialize game
 function initGame() {
     totalProgress.textContent = animals.length;
+    pointsDisplay.textContent = score;
     loadAnimal(currentAnimalIndex);
+    hideEndScreen();
 }
 
 // Load animal image
@@ -54,19 +58,56 @@ function checkAnswer(userAnswer) {
     }
 }
 
+// Save game result
+function saveGameResult(score) {
+    sessionStorage.setItem('animalGameScore', score);
+}
+
+// Show end screen
+function showEndScreen() {
+    document.querySelector('.game-container').classList.add('hidden');
+    endScreen.classList.remove('hidden');
+}
+
+// Hide end screen
+function hideEndScreen() {
+    endScreen.classList.add('hidden');
+    document.querySelector('.game-container').classList.remove('hidden');
+}
+
 // End game
 function endGame() {
-    alert(`Peli päättyi! Sait ${score}/${animals.length} pistettä!`);
-    // Reset game
+    // Update score display
+    scoreDisplay.textContent = score;
+    
+    // Save result
+    saveGameResult(score);
+    
+    // Show end screen
+    showEndScreen();
+}
+
+// Restart game
+function restartGame() {
+    // Reset game state
     currentAnimalIndex = 0;
     score = 0;
     pointsDisplay.textContent = score;
+    
+    // Hide end screen and show game
+    hideEndScreen();
+    
+    // Start new game
     loadAnimal(currentAnimalIndex);
 }
 
 // Event listeners
 yesBtn.addEventListener('click', () => checkAnswer(true));
 noBtn.addEventListener('click', () => checkAnswer(false));
+document.getElementById('restart-btn').addEventListener('click', restartGame);
+document.getElementById('to-games-btn').addEventListener('click', function() {
+    window.location.href = "koostesivu.html"; 
+});
 
-// Start game
+// Start the game
 initGame();

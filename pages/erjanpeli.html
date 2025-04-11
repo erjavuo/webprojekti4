@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +7,43 @@
     <link rel="stylesheet" href="../styles/erjanpelistyles.css">
 </head>
 <body>
-    <div id="navbar">
+    <nav id="navbar">
         <a href="">Etusivu</a>
         <a href="">Pelit</a>
         <a href="">Info</a>
-    </div>
+    </nav>
 
-    <div class="main-content">
+    <main class="main-content">
+        <div class="game-container">
+            <h1>Suomen eläin vai ei?</h1>
+            <p class="instructions">Tehtävänäsi on tunnistaa löytyykö kuvassa näkyvä eläin Suomen luonnosta.</p>
+            
+            <div class="image-container">
+                <img id="animal-image" src="" alt="Eläimen kuva">
+                <p id="progress">Kuva <span id="current">1</span>/<span id="total">10</span></p>
+            </div>
+            
+            <div class="buttons">
+                <button id="yes-btn" class="btn">Kyllä</button>
+                <button id="no-btn" class="btn">Ei</button>
+            </div>
+            
+            <div class="score">
+                <p>Pisteet pelistä: <span id="points">0</span>/10</p>
+            </div>
+        </div>
 
-    <div class="game-container">
-        <h1>Suomen eläin vai ei?</h1>
-        <p class="instructions">Tehtävänäsi on tunnistaa löytyykö kuvassa näkyvä eläin Suomen luonnosta. Valitse oikea vaihtoehto painikkeista.
-        </p>
-        
-        <div class="image-container">
-            <img id="animal-image" src="" alt="Eläimen kuva">
-            <p id="progress">Kuva <span id="current">1</span>/<span id="total">10</span></p>
+        <div id="end-screen" class="hidden">
+            <div class="end-container">
+                <h2>Peli loppui!</h2>
+                <p id="final-score">Sait <span id="score-display">0</span>/10 pistettä!</p>
+                <div class="end-buttons">
+                    <button id="restart-btn" class="btn">Pelaa uudelleen</button>
+                    <button id="to-games-btn" class="btn">Siirry pelit-sivulle</button>
+                </div>
+            </div>
         </div>
-        
-        <div class="buttons">
-            <button id="yes-btn" class="btn">Kyllä</button>
-            <button id="no-btn" class="btn">Ei</button>
-        </div>
-        
-        <div class="score">
-            <p>Pisteet pelistä: <span id="points">0</span>/10</p>
-        </div>
-        
-    </div>
-</div>
+    </main>
 
     <footer class="footer">
         <p>Web-projekti, luontopelit, ryhmä 4</p>
