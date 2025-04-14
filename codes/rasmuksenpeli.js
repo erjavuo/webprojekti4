@@ -35,7 +35,7 @@ pic22.addEventListener('click', CountTries);
 
 
 
-//Function that will get the h2 element from the html and shows the category according the current number of index element
+//Function that will set the h2 element from the html to the category from the category array according the current number of index element
 function setCategories(){
 
     disable++;
@@ -85,7 +85,7 @@ function DisableEnableButtons(){
 
 
 
-// hakee kuvat listasta ja asettaa satunnaisen kuvan kategorioille, sisältäen myös vääriä vastauksia muista kategorioista
+//Uses if else to check current index and set the images according to current category index and randomizes the image from the array using math.random
 function setrandomImageCategories(){
 
     
@@ -175,7 +175,7 @@ function ContinuetoNextCategory(){
 
 CountPoints();
 
-//This function will count the points according what index (category) is displayed and if correct button is clicked
+//This function will count the points according what index (category) is displayed and if correct button is clicked, also sends points to the session storage
 function CountPoints(){
 
     categoryquestion.textContent = categories[index];
@@ -282,7 +282,7 @@ function CountPoints(){
       
 } 
 
-// This function will count all the tries when user clicks the "Kuva 1" or "Kuva 2" buttons, increasing the tries each time by 1
+// This function will count all the tries when user clicks the "Kuva 1" or "Kuva 2" buttons, increasing the tries each time by 1, if tries are 10, will display message that game ended and how many points player had
 function CountTries(){
 
     if(index === 0){
