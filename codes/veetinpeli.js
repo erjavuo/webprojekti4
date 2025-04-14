@@ -16,8 +16,9 @@ button.addEventListener("click", startGame);
   // Function that starts the game
   function startGame(){
     document.getElementById("startScreen").style.display = "none";
-    document.getElementById("gameScreen").style.display = "container";
+    document.getElementById("gameScreen").style.display = "block";
     showNextWord();
   }
 
+  
  
