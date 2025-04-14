@@ -31,6 +31,7 @@ button{
 
 }
 
+
 #points2{
 
     display: flex;
@@ -44,12 +45,26 @@ button{
 
 #points{
 
-    display: flex;
+    display: inline-block;
+    padding-left: 46%;
     justify-content: center;
     align-items: center;
-    padding-right: 4%;  
 
     
+}
+
+#points3{
+
+   display: inline-block;
+   
+   
+
+}
+
+.pistedivit{
+    display: inline-block;
+    
+
 }
 
 .button2{

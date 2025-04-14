@@ -21,7 +21,6 @@ let pic22 = document.getElementById('pic2');
 
 pic1.addEventListener('click', setrandomImageCategories);
 pic2.addEventListener('click', setrandomImageCategories);
-but3.addEventListener('click', setrandomImageCategories);
 
 pic1.addEventListener('click', CountPoints);
 pic2.addEventListener('click', CountPoints);
@@ -34,6 +33,8 @@ pic22.addEventListener('click', CountTries);
 
 
 
+
+
 //Function that will get the h2 element from the html and shows the category according the current number of index element
 function setCategories(){
 
@@ -41,14 +42,16 @@ function setCategories(){
 
     categoryquestion.textContent = categories[index];
 
+    
+
 
     
 
 
 }
 
-DisableEnableButtons();
-
+setCategories();
+setrandomImageCategories();
 
 function DisableEnableButtons(){
 
@@ -82,7 +85,6 @@ function DisableEnableButtons(){
 
 
 
-
 // hakee kuvat listasta ja asettaa satunnaisen kuvan kategorioille, sisältäen myös vääriä vastauksia muista kategorioista
 function setrandomImageCategories(){
 
@@ -94,7 +96,7 @@ function setrandomImageCategories(){
 
 
         var listbirds=["../images/rasmuksenpelin_kuvat/Birds/0a.jpg", "../images/rasmuksenpelin_kuvat/Birds/0b.jpg", "../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/Birds/0d.jpg"];
-        var randomNumberbirds = Math.ceil(Math.random() * 3);
+        var randomNumberbirds = Math.floor(Math.random() * 3);
         img1.src=listbirds[randomNumberbirds];
 
         var listbirds2=["../images/rasmuksenpelin_kuvat/forest animals/fox-4589927_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/trout.jpg", "../images/rasmuksenpelin_kuvat/forest animals/bear-5120104_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/perch-7521273_1280.jpg","../images/rasmuksenpelin_kuvat/fishes/salmon-3704543_1280.jpg","../images/rasmuksenpelin_kuvat/forest animals/moose-70254_1280.jpg"];
@@ -145,7 +147,6 @@ function setrandomImageCategories(){
 }
 
 
-
 // This function will continue to next category if category index is less than 2, if not it will return back to "linnut" category
 function ContinuetoNextCategory(){
 
@@ -155,6 +156,7 @@ function ContinuetoNextCategory(){
         index++;
 
         document.getElementById("question").innerHTML = categories[index];
+
 
 
     }
@@ -171,9 +173,7 @@ function ContinuetoNextCategory(){
 
 }
 
-
-   
-
+CountPoints();
 
 //This function will count the points according what index (category) is displayed and if correct button is clicked
 function CountPoints(){
@@ -184,11 +184,15 @@ function CountPoints(){
     pic2.onclick = function() {
           if(index === 2){
                 points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
                 
               
                 
               
                 points.textContent = points1;
+
+                
               
 
               
@@ -197,8 +201,12 @@ function CountPoints(){
 
                 points1++;
 
+                sessionStorage.setItem("gamepoints", points1);
+
 
                 points.textContent = points1;
+
+                
 
 
             }
@@ -233,6 +241,8 @@ function CountPoints(){
                 
                 
                 points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
 
                 
 
@@ -298,7 +308,14 @@ function CountTries(){
 
         alert("Peli päättyi! Sait " + points1 + " pistettä!");
 
+
         location.reload();
+
+        points.textContent = points1;
+
+       
+
+        
 
     }
 
