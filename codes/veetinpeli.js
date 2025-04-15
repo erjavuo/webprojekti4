@@ -5,6 +5,7 @@ const words = [
   ];
 
 const button = document.getElementById('startButton');
+const buttonNext = document.getElementById('showNextWord()');
 
 button.addEventListener("click", startGame);
 
@@ -17,8 +18,21 @@ button.addEventListener("click", startGame);
   function startGame(){
     document.getElementById("startScreen").style.display = "none";
     document.getElementById("gameScreen").style.display = "block";
+    score = 0;
+    timeLeft = 60;
+    document.getElementById("score").textContent = "Pisteet: 0";
+    startTimer();
     showNextWord();
   }
+
+  // function that gets a random word from the array
+  function getRandomWord() {
+    const index = Math.floor(Math.random() * words.length);
+    return words[index];
+  }
+
+
+
 
   
  
