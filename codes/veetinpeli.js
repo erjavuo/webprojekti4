@@ -5,9 +5,10 @@ const words = [
   ];
 
 const button = document.getElementById('startButton');
-const buttonNext = document.getElementById('showNextWord()');
+const buttonNext = document.getElementById('showNextWord');
 
 button.addEventListener("click", startGame);
+buttonNext.addEventListener("click", showNextWord);
 
   let currentWord = '';
   let score = 0;
@@ -31,7 +32,11 @@ button.addEventListener("click", startGame);
     return words[index];
   }
 
-
+  // function that gets a random word to span element
+  function showNextWord() {
+    const word = getRandomWord();
+    document.getElementById("randomWord").textContent = word;
+  }
 
 
   
