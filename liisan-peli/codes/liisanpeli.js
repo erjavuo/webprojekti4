@@ -34,12 +34,15 @@ function getNextWater() {
 }
 
 // Funktio näyttää ponnahdusikkunan
-function showPopup(message, correctAnswer) {
+ function showPopup(message, correctAnswer) {
     const popupMessage = document.getElementById("popup-message");
-    if (correctAnswer) {
-        popupMessage.textContent = `Oikein!`;
+
+    if (message === 'Oikein!') {
+        popupMessage.textContent = message;
+    } else if (message === 'Peli päättyi. Kiitos!') {
+        popupMessage.textContent = message;
     } else {
-        popupMessage.textContent = `Väärin, oikea vastaus on ${correctAnswer}.`;
+        popupMessage.textContent = `${message}, oikea vastaus on ${correctAnswer}.`;
     }
 
     document.getElementById("popup").classList.remove("hidden");
@@ -57,13 +60,12 @@ function checkAnswer() {
     const userAnswer = document.getElementById("user-input").value.trim().toLowerCase();
     if (userAnswer === currentWater.name.toLowerCase()) {
         score++;
-        showPopup('Oikein!', true);
+        showPopup('Oikein!', currentWater.name); // annetaan oikea vastaus merkkijonona
     } else {
-        showPopup('Väärin', false);
+        showPopup('Väärin', currentWater.name); // annetaan oikea vastaus vaikka meni väärin
     }
 
-    // Päivitä pistemäärä
-    document.getElementById("score").textContent = `Pisteet: ${score}/10`;
+    document.getElementById("score").textContent = `Pisteet: ${score}/10`; // päivitä pistemäärä
 }
 
 // Siirry seuraavaan sanaan
@@ -71,10 +73,14 @@ function nextWord() {
     if (!gameOver) {
         hidePopup();
         getNextWater();
-        document.getElementById("mixed-word").textContent = currentWater.mixed;
-        document.getElementById("user-input").value = '';
-    } else {
-        document.getElementById("new-game-button").classList.remove("hidden");
+
+        if (!gameOver) {
+            document.getElementById("mixed-word").textContent = currentWater.mixed;
+            document.getElementById("user-input").value = '';
+        } else {
+            showPopup("Peli päättyi. Kiitos!", ""); // näyttää lopetusviestin popupissa
+            document.getElementById("new-game-button").classList.remove("hidden");
+        }
     }
 }
 

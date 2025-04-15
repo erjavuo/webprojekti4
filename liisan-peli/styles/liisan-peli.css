@@ -66,3 +66,7 @@ input {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+#score {
+    font-weight: bold;
+}
