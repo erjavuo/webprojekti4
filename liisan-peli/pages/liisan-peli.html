@@ -13,29 +13,29 @@
         <a href="koostesivu.html">Pelit</a>
         <a href="info.html">Info</a>
     </div>
+
     <div class="game-container">
 
         <h2>Sanasekoitus</h2>
-        <p>Päättele, mikä Suomen joki tai järvi sanasekoitusten takaa paljastuu.</p> 
+        <p>Mikä Suomen joki tai järvi sanasekoitusten takaa paljastuu?</p> 
     
         <div id="image-container">
-            <img id="water-image" src="" alt="Vesistön kuva">
-            <div id="mixed-word">Keijo kim</div>
+            <img id="water-image" src="" alt="picture of lake or river">
         </div>
 
         <input type="text" id="user-input" placeholder="Kirjoita arvauksesi">
             <button id="submit-button" type="button">Tarkista</button>
-            <p id="score">Pisteet: 0/10</p> <!-- Pistemäärän näyttäminen -->
+            <p id="score">Pisteet: 0/10</p> <!-- shows the player's current score -->
 
-            <div id="feedback"></div> <!-- Tässä näytetään palaute (oikein/väärin) -->
+            <div id="feedback"></div> <!-- feedback: whether the player got it right or wrong -->
 
-            <!-- Ponnahdusikkuna -->
+            <!-- a popup window -->
             <div id="popup" class="hidden">
                 <p id="popup-message"></p>
                 <button id="next-word-button">Seuraava sana</button>
             </div>
 
-            <button id="new-game-button" type="button" class="hidden">Uusi peli</button> <!-- Peli voidaan aloittaa uudelleen -->
+            <button id="new-game-button" type="button" class="hidden">Uusi peli</button> <!-- button for restarting the game after playing -->
     </div>
     <footer>
         <p>Web-projekti, luontopelit, ryhmä 4</p>

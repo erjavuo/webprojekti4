@@ -1,29 +1,29 @@
-// Alkuperäiset vesistöt ja niiden sekoitukset
+// lakes, rivers and mixed versions of their names
 const finnishWaters = [
-    { name: 'Kemijoki', mixed: 'Keijo kim', image: '../images/kemijoki.jpg' },
-    { name: 'Tornionjoki', mixed: 'Trikoo jonni', image: '../images/Tornionjoki_wikimedia_commons_mainitse_kuvaaja_ym_lahteet.jpg' },
-    { name: 'Kalajoki', mixed: 'laKki ajo', image: '../images/kalajoki.jpg' },
-    { name: 'Aurajoki', mixed: 'Aika rujo', image: '../images/aurajoki.jpg' },
-    { name: 'Muonionjoki', mixed: 'kiMono jouni', image: '../images/muonionjoki_wikimedia_commons_mainitse_kuvaaja_ym_lahteet.jpg' },
-    { name: 'Saimaa', mixed: 'maaSai', image: '../images/saimaa.jpg' },
-    { name: 'Päijänne', mixed: 'Penni jää', image: '../images/lake-paijanne-7366872_640.jpg' },
-    { name: 'Oulujärvi', mixed: 'väli juOru', image: '../images/lake-oulu.jpg' },
-    { name: 'Keitele', mixed: 'ele itKe', image: '../images/lake-keitele_goodfreephotos_mainitse.jpg' },
-    { name: 'Pielinen', mixed: 'Pinni ele', image: '../images/pielinen.jpg' }
+    { name: 'Kemijoki', mixed: 'Keijo kim', image: '../images/keijokim.jpg' },
+    { name: 'Tornionjoki', mixed: 'Trikoo jonni', image: '../images/trikoojonni.jpg' },
+    { name: 'Kalajoki', mixed: 'laKki ajo', image: '../images/lakkiajo.jpg' },
+    { name: 'Aurajoki', mixed: 'Aika rujo', image: '../images/aikarujo.jpg' },
+    { name: 'Muonionjoki', mixed: 'kiMono jouni', image: '../images/kimonojouni.jpg' },
+    { name: 'Saimaa', mixed: 'maaSai', image: '../images/maasai.jpg' },
+    { name: 'Päijänne', mixed: 'Penni jää', image: '../images/pennijää.jpg' },
+    { name: 'Oulujärvi', mixed: 'väli juOru', image: '../images/välijuoru.jpg' },
+    { name: 'Keitele', mixed: 'ele itKe', image: '../images/eleitke.jpg' },
+    { name: 'Pielinen', mixed: 'Pinni ele', image: '../images/pinniele.jpg' }
 ];
 
 let currentWater = {};
 let gameOver = false;
-let currentIndex = 0; // Seuraavan sanan index
-let score = 0; // Pelaajan pistemäärä
+let currentIndex = 0; // index for the next word
+let score = 0; // the player's score
 
-// Funktio valitsee seuraavan vesistön
+// function that chooses the next lake or river
 function getNextWater() {
     if (currentIndex < finnishWaters.length) {
         currentWater = finnishWaters[currentIndex];
         currentIndex++;
 
-        // Päivitä kuva tähän!
+        // finds the correct image and makes it visible on the page
         const imageElement = document.getElementById("water-image");
         imageElement.src = currentWater.image;
         imageElement.classList.remove("hidden");
@@ -33,7 +33,7 @@ function getNextWater() {
     }
 }
 
-// Funktio näyttää ponnahdusikkunan
+// shows a popup message
  function showPopup(message, correctAnswer) {
     const popupMessage = document.getElementById("popup-message");
 
@@ -49,33 +49,32 @@ function getNextWater() {
     document.getElementById("next-word-button").classList.remove("hidden"); // Näytetään "Seuraava sana" -nappi
 }
 
-// Funktio piilottaa ponnahdusikkunan
+// hides the popup
 function hidePopup() {
     document.getElementById("popup").classList.add("hidden");
     document.getElementById("next-word-button").classList.add("hidden"); // Piilotetaan "Seuraava sana" -nappi
 }
 
-// Tarkistetaan, onko käyttäjän vastaus oikea
+// checks if the player's answer is correct
 function checkAnswer() {
     const userAnswer = document.getElementById("user-input").value.trim().toLowerCase();
     if (userAnswer === currentWater.name.toLowerCase()) {
         score++;
-        showPopup('Oikein!', currentWater.name); // annetaan oikea vastaus merkkijonona
+        showPopup('Oikein!', currentWater.name); // player guessed right
     } else {
-        showPopup('Väärin', currentWater.name); // annetaan oikea vastaus vaikka meni väärin
+        showPopup('Väärin', currentWater.name); // reveals the correct answer if the player guessed wrong
     }
 
-    document.getElementById("score").textContent = `Pisteet: ${score}/10`; // päivitä pistemäärä
+    document.getElementById("score").textContent = `Pisteet: ${score}/10`; // updates the score
 }
 
-// Siirry seuraavaan sanaan
+// moves over to the next word
 function nextWord() {
     if (!gameOver) {
         hidePopup();
         getNextWater();
 
         if (!gameOver) {
-            document.getElementById("mixed-word").textContent = currentWater.mixed;
             document.getElementById("user-input").value = '';
         } else {
             showPopup("Peli päättyi. Kiitos!", ""); // näyttää lopetusviestin popupissa
@@ -84,13 +83,12 @@ function nextWord() {
     }
 }
 
-// Asetetaan uusi peli
+// sets up a new game
 function startNewGame() {
     currentIndex = 0;
     score = 0;
     gameOver = false;
     getNextWater();
-    document.getElementById("mixed-word").textContent = currentWater.mixed;
     document.getElementById("user-input").value = '';
     document.getElementById("feedback").textContent = '';
     document.getElementById("score").textContent = `Pisteet: ${score}/10`;
@@ -98,11 +96,11 @@ function startNewGame() {
     hidePopup();
 }
 
-// Tapahtumankuuntelijat
+// event listeners
 document.getElementById("submit-button").addEventListener("click", checkAnswer);
-document.getElementById("next-word-button").addEventListener("click", nextWord); // "Seuraava sana" -nappi
+document.getElementById("next-word-button").addEventListener("click", nextWord); 
 document.getElementById("new-game-button").addEventListener("click", startNewGame);
 
-// Aloitetaan peli
+// 
 startNewGame();
 
