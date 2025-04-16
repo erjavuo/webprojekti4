@@ -1,8 +1,8 @@
-//Tonin pelin pisteet
+//Points of Toni's game
 const memoryGamePointsSpan = document.querySelector("#muistipeli-pisteet");
 const memoryGamePoints = sessionStorage.getItem("memoryGamePoints");
 
-// Erjan pelin pisteet
+// Points of Erjas' game
 const animalGamePointsSpan = document.querySelector("#elainpeli-pisteet");
 const animalGamePoints = sessionStorage.getItem("animalGameScore");
 
