@@ -36,7 +36,7 @@ function getNextWater() {
 function showPopup(message, correctAnswer = "") {
     const popupMessage = document.getElementById("popup-message");
 
-    // Näytä viesti
+    // shows a message
     if (message.startsWith('Peli päättyi')) {
         popupMessage.textContent = message;
     } else if (message === 'Oikein!') {
@@ -47,7 +47,7 @@ function showPopup(message, correctAnswer = "") {
 
     document.getElementById("popup").classList.remove("hidden");
 
-    // Näytä tai piilota "Seuraava sana" -nappi
+    // shows or hides "seuraava sana" -button
     if (message.startsWith("Peli päättyi")) {
         document.getElementById("next-word-button").classList.add("hidden");
     } else {
