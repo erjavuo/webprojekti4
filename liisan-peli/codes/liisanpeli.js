@@ -33,8 +33,7 @@ function getNextWater() {
     }
 }
 
-// shows a popup message
- function showPopup(message, correctAnswer) {
+function showPopup(message, correctAnswer) {
     const popupMessage = document.getElementById("popup-message");
 
     if (message === 'Oikein!') {
@@ -46,7 +45,13 @@ function getNextWater() {
     }
 
     document.getElementById("popup").classList.remove("hidden");
-    document.getElementById("next-word-button").classList.remove("hidden"); // Näytetään "Seuraava sana" -nappi
+
+    // Näytä "Seuraava sana" -nappi vain jos peli ei ole päättynyt
+    if (message === "Peli päättyi. Kiitos!") {
+        document.getElementById("next-word-button").classList.add("hidden");
+    } else {
+        document.getElementById("next-word-button").classList.remove("hidden");
+    }
 }
 
 // hides the popup
@@ -76,12 +81,15 @@ function nextWord() {
 
         if (!gameOver) {
             document.getElementById("user-input").value = '';
+            document.getElementById("water-image").src = currentWater.image;
         } else {
-            showPopup("Peli päättyi. Kiitos!", ""); // näyttää lopetusviestin popupissa
+            // game over
+            showPopup("Peli päättyi. Kiitos!", "end");
             document.getElementById("new-game-button").classList.remove("hidden");
         }
     }
 }
+
 
 // sets up a new game
 function startNewGame() {
