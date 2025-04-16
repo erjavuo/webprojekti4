@@ -185,6 +185,28 @@ h1 {
 }
 
 /* Responsiveness */
+
+@media (max-width: 518px) {
+    
+    
+    #navbar a {
+        font-size: 1.1em;
+        width: 5em;
+        margin: 7px;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    
+    
+    #navbar a {
+        font-size: 1.1em;
+        width: 3.3em;
+        margin: 7px;
+    }
+}
+
 @media (max-width: 400px) {
     .buttons {
         flex-direction: column;
@@ -193,12 +215,6 @@ h1 {
     
     .btn {
         width: 100%;
-    }
-    
-    #navbar a {
-        font-size: 1.2em;
-        width: 4em;
-        margin: 5px;
     }
 
     .end-buttons {
