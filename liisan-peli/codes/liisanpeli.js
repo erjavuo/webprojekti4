@@ -33,12 +33,13 @@ function getNextWater() {
     }
 }
 
-function showPopup(message, correctAnswer) {
+function showPopup(message, correctAnswer = "") {
     const popupMessage = document.getElementById("popup-message");
 
-    if (message === 'Oikein!') {
+    // Näytä viesti
+    if (message.startsWith('Peli päättyi')) {
         popupMessage.textContent = message;
-    } else if (message === 'Peli päättyi. Kiitos!') {
+    } else if (message === 'Oikein!') {
         popupMessage.textContent = message;
     } else {
         popupMessage.textContent = `${message}, oikea vastaus on ${correctAnswer}.`;
@@ -46,8 +47,8 @@ function showPopup(message, correctAnswer) {
 
     document.getElementById("popup").classList.remove("hidden");
 
-    // Näytä "Seuraava sana" -nappi vain jos peli ei ole päättynyt
-    if (message === "Peli päättyi. Kiitos!") {
+    // Näytä tai piilota "Seuraava sana" -nappi
+    if (message.startsWith("Peli päättyi")) {
         document.getElementById("next-word-button").classList.add("hidden");
     } else {
         document.getElementById("next-word-button").classList.remove("hidden");
@@ -57,7 +58,7 @@ function showPopup(message, correctAnswer) {
 // hides the popup
 function hidePopup() {
     document.getElementById("popup").classList.add("hidden");
-    document.getElementById("next-word-button").classList.add("hidden"); // Piilotetaan "Seuraava sana" -nappi
+    document.getElementById("next-word-button").classList.add("hidden"); // hides the "Seuraava sana" -button
 }
 
 // checks if the player's answer is correct
@@ -84,12 +85,11 @@ function nextWord() {
             document.getElementById("water-image").src = currentWater.image;
         } else {
             // game over
-            showPopup("Peli päättyi. Kiitos!", "end");
+            showPopup(`Peli päättyi. Kiitos pelaamisesta! Sait ${score}/10 pistettä.`);
             document.getElementById("new-game-button").classList.remove("hidden");
         }
     }
 }
-
 
 // sets up a new game
 function startNewGame() {
