@@ -1,0 +1,117 @@
+.hidden {
+    display: none;
+}
+
+.game-container {
+    text-align: center;
+}
+
+#mixed-word {
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+}
+
+#water-image {
+    width: 50%;
+    height: 30%;
+}
+
+#popup {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#score {
+    font-weight: bold;
+}
+
+/* smaller screens */
+
+@media (max-width: 768px) {
+    #water-image {
+        width: 70%;
+        height: auto;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    button {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    #popup {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+/* for phone screens */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    #water-image {
+        width: 90%;
+        height: auto;
+    }
+
+    input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    #popup {
+        width: 90%;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    #navbar a {
+        font-size: 1em;
+        display: block;
+        margin: 5px auto;
+        width: 80%;
+    }
+}
