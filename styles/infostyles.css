@@ -1,8 +1,11 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-color: #FEFAE0;
     font-family: Verdana;
+    background-color: #FEFAE0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #navbar {
     background-color: #A6B37D;
@@ -28,7 +31,8 @@ body {
 
 footer {
     background-color: #A6B37D;
-    padding: 7px;
+    padding: 15px;
+    margin-top: auto;
 }
 
 footer p {
@@ -59,4 +63,28 @@ img {
     text-align: center;
     
 
+}
+
+@media (max-width: 518px) {
+    
+    
+    #navbar a {
+        font-size: 1.1em;
+        width: 5em;
+        margin: 7px;
+    }
+    .tekstit {
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    
+    
+    #navbar a {
+        font-size: 1.1em;
+        width: 3.3em;
+        margin: 7px;
+    }
 }

@@ -1,3 +1,12 @@
+.pelit-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    flex: 1;
+}
+
 .peli-kooste {
     width: 170px;
     text-align: center;
@@ -16,4 +25,30 @@
 a {
     text-decoration: none;
     color: black;
+}
+
+footer {
+    background-color: #A6B37D;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    .pelit-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .peli-kooste {
+        width: 80%;
+    }
+    
+    #navbar a {
+        font-size: 1.1em;
+        width: 3.3em;
+        margin: 7px;
+    }
 }

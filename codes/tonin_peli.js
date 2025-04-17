@@ -1,12 +1,13 @@
 const gameContainer = document.querySelector("#game-container");
 const startScreen = document.querySelector("#start-game-screen");
-const endScreen = document.querySelector(".end-screen");
+const endScreen = document.querySelector("#end-screen");
 const playButton = document.querySelector(".play-button");
-const resetButton = document.querySelector(".play-again");
+const resetButton = document.querySelector("#play-again");
 const gameStats = document.querySelector(".game-stats");
 const playerScore = document.getElementsByClassName("score");
 const playerTries = document.getElementsByClassName("tries");
 const divs = gameContainer.getElementsByTagName("div");
+const toGamesBtn = document.querySelector("#to-games-btn");
 let cards = [];
 let cardElements = [];
 let firstCard, secondCard;
@@ -35,12 +36,17 @@ function addPlayerTries(tries) {
 };
 
 playButton.addEventListener("click", () => {
-    startScreen.style.display = "none";
-    gameContainer.style.display = "grid";
+    startScreen.classList.add("hidden")
+    gameContainer.classList.remove("hidden")
     gameStats.style.display = "block";
 });
 
 resetButton.addEventListener("click", resetGame);
+
+// Returns user to Pelit's page
+document.getElementById('to-games-btn').addEventListener('click', function() {
+    window.location.href = "koostesivu.html"; 
+});
 
 function createCards() {
     // Makes copy of each card once.
@@ -165,7 +171,7 @@ function endGame() {
     if (score === 10 || tries === 0) {
         setTimeout(() => {
             document.querySelector(".score").display = "none";
-            document.querySelector(".points-text").textContent = `Sait ${score} pistettä!`;
+            document.querySelector(".final-score").textContent = `Sait ${score} pistettä!`;
             if (tries === 0 && score < 10) {
                 document.querySelector(".tries-text").textContent = "Yritykset loppuivat.";
             };
