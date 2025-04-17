@@ -43,6 +43,34 @@ button{
 
 }
 
+.returnbutton{
+
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#return{
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+#points4{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4%;
+
+
+}
+
 #points{
 
     display: inline-block;

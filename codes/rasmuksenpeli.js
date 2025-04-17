@@ -16,6 +16,13 @@ let img2 = document.getElementById('img2');
 let points = document.getElementById('points');
 let pic11 = document.getElementById('pic1');
 let pic22 = document.getElementById('pic2');
+let otsikko = document.getElementById('otsikko');
+let otsikko2 = document.getElementById('points3');
+let otsikko3 = document.getElementById('points2');
+let otsikko4 = document.getElementById('uusiotsikko');
+let otsikko5 = document.getElementById('uusiotsikko2');
+let otsikko6 = document.getElementById('points4');
+returnbut = document.getElementById('return');
 
 
 
@@ -189,7 +196,6 @@ function CountPoints(){
                 
               
                 
-              
                 points.textContent = points1;
 
                 
@@ -306,12 +312,33 @@ function CountTries(){
 
     if(tries === 10){
 
-        alert("Peli päättyi! Sait " + points1 + " pistettä!");
+        otsikko.style.display = 'none';
+        otsikko4.style.display = 'grid';
+
+        categoryquestion.style.display = 'none';
+        otsikko5.style.display = 'grid';
+        otsikko5.innerHTML = "Sait " + points1 + " pistettä!";
+
+        otsikko3.style.display = 'none';
+        otsikko6.innerHTML = "Palataan pääsivulle...";
+
+        otsikko2.style.display = 'none';
+        points.style.display = 'none';
+        
+
+        img1.src = "../images/wood-2045379_1280.jpg";
+        img2.src = "../images/wood-2045379_1280.jpg";
+
+        pic1.disabled = true;
+        pic2.disabled = true;
+
+        setTimeout(function(){ window.location = "../pages/rasmuksenpeli.html"; },5000);
 
 
-        location.reload();
 
-        points.textContent = points1;
+
+
+        
 
        
 
