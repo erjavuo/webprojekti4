@@ -1,9 +1,10 @@
-var categories = ['Linnut', 'Kalat', 'Metsäneläimet'];
+var categories = ['Linnut', 'Kalat', 'Metsäneläimet','Linnut', 'Kalat', 'Metsäneläimet','Linnut', 'Kalat', 'Metsäneläimet','Linnut'];
 var categoryquestion = document.getElementById('question');
 let disable = 0;
 let index = 0;
 let tries = 0;
 let points1 = 0;
+let cut = 0;
 
 
 
@@ -26,8 +27,8 @@ returnbut = document.getElementById('return');
 
 
 
-pic1.addEventListener('click', setrandomImageCategories);
-pic2.addEventListener('click', setrandomImageCategories);
+pic1.addEventListener('click', setImageCategories);
+pic2.addEventListener('click', setImageCategories);
 
 pic1.addEventListener('click', CountPoints);
 pic2.addEventListener('click', CountPoints);
@@ -58,7 +59,7 @@ function setCategories(){
 }
 
 setCategories();
-setrandomImageCategories();
+setImageCategories();
 
 function DisableEnableButtons(){
 
@@ -92,54 +93,152 @@ function DisableEnableButtons(){
 
 
 
-//Uses if else to check current index and set the images according to current category index and randomizes the image from the array using math.random
-function setrandomImageCategories(){
+//Uses if else to check current index and set the images according to current category index from the arrays
+function setImageCategories(){
 
+    let listbirds=["../images/rasmuksenpelin_kuvat/Birds/0a.jpg"];
+    let listbirds2=["../images/rasmuksenpelin_kuvat/forest animals/fox-4589927_1280.jpg"];
+
+    let listfishes=["../images/rasmuksenpelin_kuvat/fishes/pike-4573363_1280.jpg"];
+    let listfishes2=["../images/rasmuksenpelin_kuvat/forest animals/lynx-7253623_1280.jpg"];
+
+    let listanimals=["../images/rasmuksenpelin_kuvat/Birds/woodpecker-2424431_1280.jpg"];
+    let listanimals2=["../images/rasmuksenpelin_kuvat/forest animals/rabbit-1882699_1280.jpg"];
+
+    let listbirdsindex3=["../images/rasmuksenpelin_kuvat/Birds/0b.jpg"];
+    let listbirds2index3=["../images/rasmuksenpelin_kuvat/forest animals/moose-70254_1280.jpg"];
+
+    let listfishesindex4=["../images/rasmuksenpelin_kuvat/fishes/salmon-3704543_1280.jpg"];
+    let listfishes2index4=["../images/rasmuksenpelin_kuvat/forest animals/otter-7228458_1280.jpg"];
+
+    let listanimalsindex5=["../images/rasmuksenpelin_kuvat/forest animals/wolf-635063_1280.jpg"];
+    let listanimals2index5=["../images/rasmuksenpelin_kuvat/Birds/blue-tit-8521052_1280.jpg"];
+
+    let listbirdsindex6=["../images/rasmuksenpelin_kuvat/Birds/bird-7736116_1280.jpg"];
+    let listbirds2index6=["../images/rasmuksenpelin_kuvat/fishes/trout.jpg"];
     
+    let listfishesindex7=["../images/rasmuksenpelin_kuvat/forest animals/bear-5120104_1280.jpg"];
+    let listfishes2index7=["../images/rasmuksenpelin_kuvat/fishes/pike-4573363_1280.jpg"];
+
+    let listanimalsindex8=["../images/rasmuksenpelin_kuvat/forest animals/roe-deer-2634729_1280.jpg"];
+    let listanimal2sindex8=["../images/rasmuksenpelin_kuvat/Birds/common-raven-3184260_1280.jpg"];
+
+    let listbirdsindex9=["../images/rasmuksenpelin_kuvat/Birds/0c.jpg"];
+    let listbirds2index9=["../images/rasmuksenpelin_kuvat/fishes/brown-trout-1524955_1280.jpg"];
+
    
 
     if(index === 0){
 
-
-
-        var listbirds=["../images/rasmuksenpelin_kuvat/Birds/0a.jpg", "../images/rasmuksenpelin_kuvat/Birds/0b.jpg", "../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/Birds/0d.jpg"];
-        var randomNumberbirds = Math.floor(Math.random() * 3);
-        img1.src=listbirds[randomNumberbirds];
-
-        var listbirds2=["../images/rasmuksenpelin_kuvat/forest animals/fox-4589927_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/trout.jpg", "../images/rasmuksenpelin_kuvat/forest animals/bear-5120104_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/perch-7521273_1280.jpg","../images/rasmuksenpelin_kuvat/fishes/salmon-3704543_1280.jpg","../images/rasmuksenpelin_kuvat/forest animals/moose-70254_1280.jpg"];
-        var randomNumberbirds2 = Math.ceil(Math.random() * 5);
-        img2.src=listbirds2[randomNumberbirds2];
-
-
-    } else if(index === 1){
+        
+        img1.src=listbirds;
 
         
+        img2.src=listbirds2;
 
 
-        var listfishes=["../images/rasmuksenpelin_kuvat/fishes/perch-7521273_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/pike-2276178_1280.jpg","../images/rasmuksenpelin_kuvat/fishes/salmon-3704543_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/trout.jpg"];
-        var randomNumberfishes = Math.ceil(Math.random() * 3);
-        img1.src=listfishes[randomNumberfishes];
 
-        var listfishes2=["../images/rasmuksenpelin_kuvat/forest animals/bear-5120104_1280.jpg","../images/rasmuksenpelin_kuvat/forest animals/fox-4589927_1280.jpg", "../images/rasmuksenpelin_kuvat/Birds/0a.jpg", "../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/forest animals/moose-70254_1280.jpg","../images/rasmuksenpelin_kuvat/Birds/0b.jpg"];
-        var randomNumberfishes2 = Math.ceil(Math.random()* 5);
-        img2.src=listfishes2[randomNumberfishes2];
-
-    } else if (index === 2){
+    }else if(index === 1){
 
         
+        img1.src=listfishes;
+
+        
+        img2.src=listfishes2;
 
 
-        var listanimals=["../images/rasmuksenpelin_kuvat/Birds/0c.jpg", "../images/rasmuksenpelin_kuvat/Birds/0b.jpg","../images/rasmuksenpelin_kuvat/fishes/pike-2276178_1280.jpg", "../images/rasmuksenpelin_kuvat/fishes/trout.jpg","../images/rasmuksenpelin_kuvat/Birds/0d.jpg","../images/rasmuksenpelin_kuvat/Birds/0a.jpg"];
-        var randomNumberanimals = Math.ceil(Math.random() * 5);
-        img1.src=listanimals[randomNumberanimals];
 
-        var listanimals2=["../images/rasmuksenpelin_kuvat/forest animals/bear-5120104_1280.jpg","../images/rasmuksenpelin_kuvat/forest animals/fox-4589927_1280.jpg", "../images/rasmuksenpelin_kuvat/forest animals/moose-70254_1280.jpg"];
-        var randomNumberanimals2 = Math.ceil(Math.random()* 2);
-        img2.src=listanimals2[randomNumberanimals2];
+
+    }else if(index === 2){
+
+        
+        img1.src=listanimals;
+
+        img2.src=listanimals2;
+
+
+
+
+
+    }else if(index === 3){
+
+        
+        img1.src=listbirdsindex3;
+
+        img2.src=listbirds2index3;
+
+
+
+
+
+    }else if(index === 4){
+
+        
+        img1.src=listfishesindex4;
+
+        img2.src=listfishes2index4;
+
+
+
+
+
+    }else if(index === 5){
+
+        
+        img1.src=listanimalsindex5;
+
+        img2.src=listanimals2index5;
+
+
+
+
+
+    }else if(index === 6){
+
+        
+        img1.src=listbirdsindex6;
+
+        img2.src=listbirds2index6;
+
+
+
+
+
+    }else if(index === 7){
+
+        
+        img1.src=listfishesindex7;
+
+        img2.src=listfishes2index7;
+
+
+
+
+
+    }else if(index === 8){
+
+        
+        img1.src=listanimal2sindex8;
+
+        img2.src=listanimalsindex8;
+
+
+
+
+
+    }else if(index === 9){
+
+        
+        img1.src=listbirdsindex9;
+
+        img2.src=listbirds2index9;
+
+
 
 
 
     }
+    
         
 
     
@@ -158,7 +257,7 @@ function setrandomImageCategories(){
 function ContinuetoNextCategory(){
 
 
-    if(index < 2){
+    if(index < 10){
 
         index++;
 
@@ -215,7 +314,80 @@ function CountPoints(){
                 
 
 
+            }else if(index === 5){
+
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+
+                points.textContent = points1;
+
+                
+
+
+            }else if(index === 4){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
+            }else if(index === 5){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
+            }else if(index === 6){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
+            }else if(index === 7){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
+            }else if(index === 10){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
             }
+            
             
             
             
@@ -255,6 +427,42 @@ function CountPoints(){
                 points.textContent = points1; 
 
 
+            }else if(index === 3){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
+            }else if(index === 8){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
+            }else if(index === 9){
+                
+                
+                points1++;
+
+                sessionStorage.setItem("gamepoints", points1);
+
+                
+
+                points.textContent = points1; 
+
+
             }
             else{
 
@@ -267,7 +475,7 @@ function CountPoints(){
 
     }
 
-    if(index < 2){
+    if(index < 10){
 
         index++;
 
@@ -288,29 +496,11 @@ function CountPoints(){
       
 } 
 
-// This function will count all the tries when user clicks the "Kuva 1" or "Kuva 2" buttons, increasing the tries each time by 1, if tries are 10, will display message that game ended and how many points player had
+// This function will count all the tries when user clicks the "Kuva 1" or "Kuva 2" buttons, increasing the tries each time by 1, if tries are 10, will display message that game ended and how many points player had and redirects back to main site in 5 seconds
 function CountTries(){
+  
 
-    if(index === 0){
-
-        tries++;
-
-
-    }
-    else if(index === 1){
-
-        tries++;
-
-
-    }
-
-    else if(index === 2){
-
-        tries++;
-
-    }
-
-    if(tries === 10){
+    if(tries === 9){
 
         otsikko.style.display = 'none';
         otsikko4.style.display = 'grid';
@@ -343,6 +533,10 @@ function CountTries(){
        
 
         
+
+    }else{
+
+        tries++;
 
     }
 
