@@ -61,5 +61,11 @@ buttonCorrect.addEventListener("click", correctGuess);
     }, 1000);
   }
 
+  // function that ends the game
+  function endGame() {
+    document.getElementById("word").textContent = "Aika loppui!";
+      document.getElementById("showNextWord").style.display = "none";
+      document.getElementById("correctGuess").style.display = "none";
+  }
   
   
