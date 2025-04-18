@@ -6,9 +6,11 @@ const words = [
 
 const button = document.getElementById('startButton');
 const buttonNext = document.getElementById('showNextWord');
+const buttonCorrect = document.getElementById('correctGuess');
 
 button.addEventListener("click", startGame);
 buttonNext.addEventListener("click", showNextWord);
+buttonCorrect.addEventListener("click", correctGuess);
 
   let currentWord = '';
   let score = 0;
@@ -19,6 +21,7 @@ buttonNext.addEventListener("click", showNextWord);
   function startGame(){
     document.getElementById("startScreen").style.display = "none";
     document.getElementById("gameScreen").style.display = "block";
+
     score = 0;
     timeLeft = 60;
     document.getElementById("score").textContent = "Pisteet: 0";
@@ -38,6 +41,11 @@ buttonNext.addEventListener("click", showNextWord);
     document.getElementById("randomWord").textContent = word;
   }
 
-
+  // function that adds a point to the score for right answer
+  function correctGuess() {
+    score++;
+    document.getElementById("score").textContent = `Pisteet: ${score}`;
+    showNextWord();
+  }
   
- 
+  
