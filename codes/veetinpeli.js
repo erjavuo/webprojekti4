@@ -47,5 +47,19 @@ buttonCorrect.addEventListener("click", correctGuess);
     document.getElementById("score").textContent = `Pisteet: ${score}`;
     showNextWord();
   }
+
+  // function that starts the timer made in html
+  function startTimer() {
+    document.getElementById("timer").textContent = `Aikaa jäljellä: ${timeLeft} sekuntia`;
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      document.getElementById("timer").textContent = `Aikaa jäljellä: ${timeLeft} sekuntia`;
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        endGame();
+      }
+    }, 1000);
+  }
+
   
   
