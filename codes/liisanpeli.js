@@ -86,6 +86,7 @@ function nextWord() {
         } else {
             // game over
             showPopup(`Peli päättyi. Kiitos pelaamisesta! Sait ${score}/10 pistettä.`);
+            sessionStorage.setItem("wordmixGamePoints", score); // game points are saved to sessionStorage
             document.getElementById("new-game-button").classList.remove("hidden");
         }
     }
