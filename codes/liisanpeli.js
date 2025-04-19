@@ -1,15 +1,15 @@
 // lakes, rivers and mixed versions of their names
 const finnishWaters = [
-    { name: 'Kemijoki', mixed: 'Keijo kim', image: '../images/keijokim.jpg' },
-    { name: 'Tornionjoki', mixed: 'Trikoo jonni', image: '../images/trikoojonni.jpg' },
-    { name: 'Kalajoki', mixed: 'laKki ajo', image: '../images/lakkiajo.jpg' },
-    { name: 'Aurajoki', mixed: 'Aika rujo', image: '../images/aikarujo.jpg' },
-    { name: 'Muonionjoki', mixed: 'kiMono jouni', image: '../images/kimonojouni.jpg' },
-    { name: 'Saimaa', mixed: 'maaSai', image: '../images/maasai.jpg' },
-    { name: 'Päijänne', mixed: 'Penni jää', image: '../images/pennijää.jpg' },
-    { name: 'Oulujärvi', mixed: 'väli juOru', image: '../images/välijuoru.jpg' },
-    { name: 'Keitele', mixed: 'ele itKe', image: '../images/eleitke.jpg' },
-    { name: 'Pielinen', mixed: 'Pinni ele', image: '../images/pinniele.jpg' }
+    { name: 'Kemijoki', mixed: 'Keijo kim', image: '../images/liisanpeli_images/keijokim.jpg' },
+    { name: 'Tornionjoki', mixed: 'Trikoo jonni', image: '../images/liisanpeli_images/trikoojonni.jpg' },
+    { name: 'Kalajoki', mixed: 'laKki ajo', image: '../images/liisanpeli_images/lakkiajo.jpg' },
+    { name: 'Aurajoki', mixed: 'Aika rujo', image: '../images/liisanpeli_images/aikarujo.jpg' },
+    { name: 'Muonionjoki', mixed: 'kiMono jouni', image: '../images/liisanpeli_images/kimonojouni.jpg' },
+    { name: 'Saimaa', mixed: 'maaSai', image: '../images/liisanpeli_images/maasai.jpg' },
+    { name: 'Päijänne', mixed: 'Penni jää', image: '../images/liisanpeli_images/pennijää.jpg' },
+    { name: 'Oulujärvi', mixed: 'väli juOru', image: '../images/liisanpeli_images/välijuoru.jpg' },
+    { name: 'Keitele', mixed: 'ele itKe', image: '../images/liisanpeli_images/eleitke.jpg' },
+    { name: 'Pielinen', mixed: 'Pinni ele', image: '../images/liisanpeli_images/pinniele.jpg' }
 ];
 
 let currentWater = {};
