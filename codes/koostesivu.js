@@ -1,3 +1,6 @@
+const spanForSumOfPoints = document.getElementById("pisteet-yhteensa");
+let sumOfPoints = 0;
+
 //Points of Toni's game
 const memoryGamePointsSpan = document.querySelector("#muistipeli-pisteet");
 const memoryGamePoints = sessionStorage.getItem("memoryGamePoints");
@@ -13,14 +16,20 @@ const wordmixGamePoints = sessionStorage.getItem("wordmixGamePoints");
 // If points in session storage are not null, adds points from session storage to website 
 if (memoryGamePoints !== null) {
     memoryGamePointsSpan.textContent = memoryGamePoints
+    sumOfPoints+=Number(memoryGamePoints)
+    spanForSumOfPoints.textContent = sumOfPoints;
 }
 
 // Jos eläinpelissä on pisteitä, näytä ne
 if (animalGamePoints !== null) {
     animalGamePointsSpan.textContent = animalGamePoints;
+    sumOfPoints+=Number(animalGamePoints)
+    spanForSumOfPoints.textContent = sumOfPoints;
 }
 
 // Sanasekoitus: If points in session storage are not null, adds points from session storage to website 
 if (wordmixGamePoints !== null) {
     wordmixGamePointsSpan.textContent = wordmixGamePoints;
+    sumOfPoints+=Number(wordmixGamePoints)
+    spanForSumOfPoints.textContent = sumOfPoints;
 }
