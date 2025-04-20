@@ -49,21 +49,12 @@ function setCategories(){
     disable++;
 
     categoryquestion.textContent = categories[index];
-
-    
-
-
-    
-
-
 }
 
 setCategories();
 setImageCategories();
 
 function DisableEnableButtons(){
-
-
     if(disable === 0){
 
         pic1.disabled = true;
@@ -87,10 +78,6 @@ function DisableEnableButtons(){
 
 
 }
-
-
-
-
 
 
 //Uses if else to check current index and set the images according to current category index from the arrays
@@ -127,7 +114,6 @@ function setImageCategories(){
     let listbirds2index9=["../images/rasmuksenpelin_kuvat/fishes/brown-trout-1524955_1280.jpg"];
 
    
-
     if(index === 0){
 
         
@@ -238,20 +224,9 @@ function setImageCategories(){
 
 
     }
-    
         
 
-    
-
-    
-
-
-
-    
-    
-
 }
-
 
 // This function will continue to next category if category index is less than 2, if not it will return back to "linnut" category
 function ContinuetoNextCategory(){
