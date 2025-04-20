@@ -43,23 +43,8 @@ button{
 
 }
 
-.returnbutton{
-
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
 
 
-}
-
-#return{
-    justify-content: center;
-    align-items: center;
-    
-
-
-}
 
 #points4{
 
@@ -150,13 +135,6 @@ p{
 
 
 
-footer{
-
- margin-top: 240px;
-
-
-
-}
 
 #navbar{
 
@@ -164,16 +142,6 @@ footer{
 
 }
 
-#coverpicture{
- width: 16%;
- min-width: 10%;
- display: block;
- margin: 0 auto;
- 
- border-color: black;
- margin-top: 15px;
-
-}
 
 img{
 
@@ -209,5 +177,508 @@ img{
 
 .birds{
    margin-left: 30%;
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+
+    h2{
+
+        font-size: 1.5vh;
+
+    }
+
+    .birds{
+
+        display: grid;
+
+        width: 70%;
+
+        
+
+        
+
+    }
+
+    .image1{
+
+        padding-left: 15%;
+       
+
+
+    }
+    .image2{
+       
+
+        padding-left: 5%;
+
+    }
+
+    button{
+
+       font-size: 1.6vh;
+
+
+    }
+    #points2{
+
+        font-size: 1.5vh;
+
+
+
+    }
+    #points3{
+
+        font-size: 1.5vh;
+        
+
+
+
+    }
+    #points{
+
+        font-size: 1.5vh;
+        padding-left: 43%;
+        
+
+
+
+    }
+
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 508px) {
+
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 43%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 16%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 9%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+
+}
+@media screen and (min-width: 509px) and (max-width: 610px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 43%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 16%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 9%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+}
+@media screen and (min-width: 610px) and (max-width: 710px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 44%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 16%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 9%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+
+}
+@media screen and (min-width: 710px) and (max-width: 810px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 44%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 16%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 9%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+
+
+}
+@media screen and (min-width: 810px) and (max-width: 910px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 45%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 17%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 10%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+}
+@media screen and (min-width: 910px) and (max-width: 1010px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 45%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 17%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 10%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+}
+
+@media screen and (min-width: 1010px) and (max-width: 1210px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 45%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 17%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 10%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+
+}
+@media screen and (min-width: 1210px) and (max-width: 1410px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 45.5%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 17%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 10%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+
+
+}
+
+@media screen and (min-width: 1410px) and (max-width: 1610px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 46%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 18%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 11%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+ 
+ 
+     }
+
+
+}
+
+@media screen and (min-width: 1610px) and (max-width: 2560px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 46%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 18%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 11%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+        height: 20%;
+ 
+ 
+     }
+
+
+
+}
+@media screen and (min-width: 2560px) and (max-width: 3000px) {
+
+    h2{
+
+        font-size: 2vh;
+
+    }
+    #points{
+
+        
+        padding-left: 46%;
+        
+
+
+
+    }.image1{
+
+        padding-left: 18%;
+        width: 70%;
+       
+
+
+    }.image2{
+       
+
+        padding-left: 11%;
+        width: 70%;
+
+    }
+    button{
+
+        font-size: 2vh;
+        height: 20%;
+ 
+ 
+     }
+
+
+
 
 }
