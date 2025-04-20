@@ -6,7 +6,7 @@ button{
        height: 40px;
        background-color: #A6B37D;;
        align-items: center;
-       font-size: large;
+       font-size: 1,5vh;
 
 }
 
@@ -30,7 +30,6 @@ button{
 
 
 h2{
-
 padding-bottom: 1vh;
 font-size: 3vh;
 
@@ -46,27 +45,135 @@ p{
 
 
 
-footer{
-
-    margin-top: 115px;
 
 
-
-}
-
-#navbar{
-
-    font-size: 2.1vh;
-
-}
 
 #coverpicture{
     width: 16%;
-    min-width: 10%;
+    
     display: block;
     margin: 0 auto;
     
     border-color: black;
-    margin-top: 15px;
+    margin-top: 3%;
 
 }
+
+@media screen and (min-width: 500px)  and (max-width: 900px) {
+
+    #coverpicture{
+
+        width: 25%;
+
+
+    }
+
+
+}
+
+@media screen and (min-width: 600px)  and (max-width: 900px) {
+
+    .button{
+
+        padding-right: 8%;
+
+
+    }
+
+
+}
+
+@media screen and (min-width: 300px)  and (max-width: 500px) {
+
+    #coverpicture{
+
+        display: none;
+
+
+    }
+
+    .button{
+
+
+        padding-right: 20%;
+
+    }
+
+
+}
+
+@media screen and (min-width: 430px)  and (max-width: 574px) {
+
+    .button{
+
+
+        padding-right: 15%;
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 299px) {
+
+    #coverpicture{
+
+        display: none;
+
+
+    }
+
+
+}
+
+@media screen and (min-width: 575px) and (max-width: 800px) {
+
+    .button{
+
+        padding-right: 10%;
+
+
+    }
+
+
+}
+
+@media screen and (min-width: 220px) and (max-width: 299px) {
+
+    .button{
+
+        padding-right: 20%;
+
+
+    }
+
+
+}
+
+@media screen and (min-width: 520px) and (max-width: 899px) {
+
+    .button{
+        
+        padding-bottom: 2vh;
+
+    
+    }
+
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    button{
+
+        font-size: 2vh;
+        height: 50%;
+
+    }
+
+
+}
+
+
+
