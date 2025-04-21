@@ -25,6 +25,7 @@ let otsikko4 = document.getElementById('uusiotsikko');
 let otsikko5 = document.getElementById('uusiotsikko2');
 let otsikko6 = document.getElementById('points4');
 returnbut = document.getElementById('return');
+startgame = document.getElementById('startgame');
 
 
 //Adding button click event listeners for functions
@@ -37,6 +38,8 @@ pic2.addEventListener('click', CountPoints);
 
 pic11.addEventListener('click', CountTries);
 pic22.addEventListener('click', CountTries);
+
+startgame.addEventListener('click', startScreen);
 
 
 
@@ -231,6 +234,56 @@ function setImageCategories(){
 
     }
         
+
+}
+
+//Will change image to generic one and disables kuva buttons and hides some h2 and p elements, if button is clicked then it updates these elements with new ones
+function startScreen(){
+
+    img1.src="../images/wood-2045379_1280.jpg";
+    img2.src="../images/wood-2045379_1280.jpg";
+
+    pic1.disabled = true;
+    pic2.disabled = true;
+
+    points.style.display = 'none';
+    otsikko2.style.display= 'none';
+    otsikko3.style.display = 'none';
+
+    otsikko.innerHTML = "Valitse kumpi kuvista ei kuulu näytettävään kategoriaan";
+    categoryquestion.innerHTML = 'Jatka painamalla "Pelaa"';
+
+
+    startgame.onclick = function() {
+
+        pic1.disabled = false;
+        pic2.disabled = false;
+
+        startgame.style.display = 'none';
+
+        img1.src="../images/rasmuksenpelin_kuvat/Birds/0a.jpg";
+        img2.src="../images/rasmuksenpelin_kuvat/forest animals/fox-4589927_1280.jpg";
+
+        otsikko.innerHTML = "Valitse kumpi seuraavista kuvista ei kuulu kategoriaan:";
+        categoryquestion.innerHTML = "Linnut";
+
+        points.style.display = 'inline-block';
+        otsikko2.style.display= 'inline-block';
+        otsikko3.style.display = 'flex';
+
+
+
+
+        
+
+
+
+
+    }
+
+    
+
+
 
 }
 //Help used from https://stackoverflow.com/questions/67324174/how-can-i-get-the-next-items-of-an-array-after-clicking-on-a-button
@@ -525,6 +578,8 @@ function CountTries(){
 
 
 }
+
+startScreen();
 
 
 //Code references used in the project:
