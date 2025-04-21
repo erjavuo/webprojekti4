@@ -1,3 +1,4 @@
+//Setting up array for categories until index 10 and adding variables
 var categories = ['Linnut', 'Kalat', 'Metsäneläimet','Linnut', 'Kalat', 'Metsäneläimet','Linnut', 'Kalat', 'Metsäneläimet','Linnut'];
 var categoryquestion = document.getElementById('question');
 let disable = 0;
@@ -7,7 +8,7 @@ let points1 = 0;
 let cut = 0;
 
 
-
+//Getting html elements from html file by their id
 let pic1 = document.getElementById('pic1');
 let pic2 = document.getElementById('pic2');
 let but3 = document.getElementById('but3');
@@ -26,7 +27,7 @@ let otsikko6 = document.getElementById('points4');
 returnbut = document.getElementById('return');
 
 
-
+//Adding button click event listeners for functions
 pic1.addEventListener('click', setImageCategories);
 pic2.addEventListener('click', setImageCategories);
 
@@ -228,7 +229,7 @@ function setImageCategories(){
 
 }
 
-// This function will continue to next category if category index is less than 2, if not it will return back to "linnut" category
+// This function will continue to next category if category index is less than 10, if not it will return back to "linnut" category / index 0
 function ContinuetoNextCategory(){
 
 
@@ -498,15 +499,6 @@ function CountTries(){
         pic2.disabled = true;
 
         setTimeout(function(){ window.location = "../pages/rasmuksenpeli.html"; },5000);
-
-
-
-
-
-        
-
-       
-
         
 
     }else{
