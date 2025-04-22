@@ -57,7 +57,7 @@ p{
     margin-top: 3%;
 
 }
-
+/*Media screens for most devices*/
 @media screen and (min-width: 500px)  and (max-width: 900px) {
 
     #coverpicture{
@@ -138,7 +138,7 @@ p{
 
 }
 
-@media screen and (min-width: 220px) and (max-width: 299px) {
+@media screen and (min-width: 220px) and (max-width: 298px) {
 
     .button{
 
@@ -201,6 +201,10 @@ p{
 //Help taken from https://stackoverflow.com/questions/9067892/how-to-align-two-elements-on-the-same-line-without-changing-html
 //originally written by Taras S. https://stackoverflow.com/users/9607393/taras-s and edited by isherwood https://stackoverflow.com/users/1264804/isherwood
 //License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+
+//Help used originally from https://stackoverflow.com/questions/26900504/random-image-generation-in-javascript
+//written by Anik Islam Abhi https://stackoverflow.com/users/4161269/anik-islam-abhi
+//License Attribution-ShareAlike 3.0 Unported https://creativecommons.org/licenses/by-sa/3.0/ 
 
 //Help taken from https://stackoverflow.com/questions/3341011/making-a-button-thats-a-link-in-html
 //Written by edeverett https://stackoverflow.com/users/446680/edeverett, edited by TrakJohnson https://stackoverflow.com/users/4489998/trakjohnson

@@ -277,7 +277,7 @@ img{
 
 
 }
-
+/*Media screens for almost all devices*/
 @media screen and (min-width: 400px) and (max-width: 508px) {
 
 
@@ -899,6 +899,10 @@ img{
 //Written by edeverett https://stackoverflow.com/users/446680/edeverett, edited by TrakJohnson https://stackoverflow.com/users/4489998/trakjohnson
 //License CC BY-SA 2.5 https://creativecommons.org/licenses/by-sa/2.5/
 
+//Help used originally from https://stackoverflow.com/questions/26900504/random-image-generation-in-javascript
+//written by Anik Islam Abhi https://stackoverflow.com/users/4161269/anik-islam-abhi
+//License Attribution-ShareAlike 3.0 Unported https://creativecommons.org/licenses/by-sa/3.0/ 
+
 //Help taken from https://stackoverflow.com/questions/67324174/how-can-i-get-the-next-items-of-an-array-after-clicking-on-a-button
 //Originally written by AmiralBl3ndic https://stackoverflow.com/users/9073639/amiralbl3ndic
 //License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/ 
@@ -910,7 +914,7 @@ img{
 //Moodle material of the course and material of the Web programming course were also helpful and especially this one tutorial was helpful to get started:
 //https://oulu.cloud.panopto.eu/Panopto/Pages/embed.aspx?id=5aac8a53-5eb6-4249-8870-b29801313f7c
 
-//Used help from some projects I have done in other courses, such as Web Programming or Website implementation courses
+//Used help from some projects I have done in other courses, such as Web Programming or Website implementation course
 
 //Also something I have probably used as help from these sites as I have bookmarked them but don't remember anymore which part of the code it was:
 

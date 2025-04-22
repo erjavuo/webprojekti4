@@ -240,8 +240,8 @@ function setImageCategories(){
 //Will change image to generic one and disables kuva buttons and hides some h2 and p elements, if button is clicked then it updates these elements with new ones
 function startScreen(){
 
-    img1.src="../images/wood-2045379_1280.jpg";
-    img2.src="../images/wood-2045379_1280.jpg";
+    img1.src="../images/rasmuksenpelin_kuvat/wood-2045379_1280.jpg";
+    img2.src="../images/rasmuksenpelin_kuvat/wood-2045379_1280.jpg";
 
     pic1.disabled = true;
     pic2.disabled = true;
@@ -327,7 +327,7 @@ function CountPoints(){
           if(index === 2){
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
                 
               
                 
@@ -342,7 +342,7 @@ function CountPoints(){
 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
 
                 points.textContent = points1;
@@ -354,7 +354,7 @@ function CountPoints(){
 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
 
                 points.textContent = points1;
@@ -367,7 +367,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -379,7 +379,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -391,7 +391,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -403,7 +403,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -415,7 +415,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -456,7 +456,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -468,7 +468,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -480,7 +480,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -492,7 +492,7 @@ function CountPoints(){
                 
                 points1++;
 
-                sessionStorage.setItem("gamepoints", points1);
+                sessionStorage.setItem("whatanimalgamepoints", points1);
 
                 
 
@@ -560,8 +560,8 @@ function CountTries(){
         points.style.display = 'none';
         
 
-        img1.src = "../images/wood-2045379_1280.jpg";
-        img2.src = "../images/wood-2045379_1280.jpg";
+        img1.src = "../images/rasmuksenpelin_kuvat/wood-2045379_1280.jpg";
+        img2.src = "../images/rasmuksenpelin_kuvat/wood-2045379_1280.jpg";
 
         pic1.disabled = true;
         pic2.disabled = true;
@@ -621,6 +621,10 @@ startScreen();
 //And help taken from https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event -->
 //Originally written by brad https://stackoverflow.com/users/74389/brad, edited by Dasar https://stackoverflow.com/users/5657079/dasar -->
 //License: Attribution-ShareAlike 2.5 Generic https://creativecommons.org/licenses/by-sa/2.5/
+
+//Help used originally from https://stackoverflow.com/questions/26900504/random-image-generation-in-javascript
+//written by Anik Islam Abhi https://stackoverflow.com/users/4161269/anik-islam-abhi
+//License Attribution-ShareAlike 3.0 Unported https://creativecommons.org/licenses/by-sa/3.0/ 
 
 //Moodle material of the course and material of the Web programming course were also helpful and especially this one tutorial was helpful to get started:
 //https://oulu.cloud.panopto.eu/Panopto/Pages/embed.aspx?id=5aac8a53-5eb6-4249-8870-b29801313f7c
