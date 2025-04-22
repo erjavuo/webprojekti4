@@ -28,6 +28,9 @@ buttonCorrect.addEventListener("click", correctGuess);
     score = 0;
     timeLeft = 60;
     document.getElementById("score").textContent = "Pisteet: 0";
+
+    availableWords = [...words]; // kopioi alkuperäiset sanat
+
     startTimer();
     showNextWord();
   }
@@ -66,16 +69,18 @@ buttonCorrect.addEventListener("click", correctGuess);
       document.getElementById("timer").textContent = `Aikaa jäljellä: ${timeLeft} sekuntia`;
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
-        endGame();
+        endGame("Aika loppui!");
       }
     }, 1000);
   }
 
   // function that ends the game
-  function endGame() {
-    document.getElementById("word").textContent = "Aika loppui!";
+  function endGame(message) {
+    clearInterval(timerInterval);
+    document.getElementById("word").textContent = message;
       document.getElementById("showNextWord").style.display = "none";
       document.getElementById("correctGuess").style.display = "none";
+      document.getElementById("timer").textContent = `Peli päättyi – pisteet: ${score}`;
   }
   
   
