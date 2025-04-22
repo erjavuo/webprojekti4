@@ -42,6 +42,10 @@ buttonCorrect.addEventListener("click", correctGuess);
   // function that gets a random word to span element
   function showNextWord() {
     const word = getRandomWord();
+    if (word === null) {
+      endGame("Kaikki sanat käytetty!");
+      return;
+    }
     document.getElementById("randomWord").textContent = word;
   }
 
