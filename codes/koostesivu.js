@@ -17,6 +17,9 @@ const wordmixGamePoints = sessionStorage.getItem("wordmixGamePoints");
 const whatanimalGamePointsSpan = document.querySelector("#mikaelain-pisteet");
 const whatanimalGamePoints = sessionStorage.getItem("whatanimalgamepoints");
 
+const explainGamePointsSpan = document.querySelector("#selityspeli-pisteet");
+const explainGamePoints = sessionStorage.getItem("explainGamePoints");
+
 // If points in session storage are not null, adds points from session storage to website 
 if (memoryGamePoints !== null) {
     memoryGamePointsSpan.textContent = memoryGamePoints
@@ -42,5 +45,11 @@ if (wordmixGamePoints !== null) {
 if (whatanimalGamePoints !== null) {
     whatanimalGamePointsSpan.textContent = whatanimalGamePoints;
     sumOfPoints+=Number(whatanimalGamePoints)
+    spanForSumOfPoints.textContent = sumOfPoints;
+}
+
+if (explainGamePoints !== null) {
+    explainGamePointsSpan.textContent = explainGamePoints;
+    sumOfPoints+=Number(explainGamePoints)
     spanForSumOfPoints.textContent = sumOfPoints;
 }

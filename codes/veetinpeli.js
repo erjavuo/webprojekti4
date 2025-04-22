@@ -81,6 +81,7 @@ buttonCorrect.addEventListener("click", correctGuess);
       document.getElementById("showNextWord").style.display = "none";
       document.getElementById("correctGuess").style.display = "none";
       document.getElementById("timer").textContent = `Peli päättyi – pisteet: ${score}`;
+      sessionStorage.setItem("explainGamePoints", score);
   }
   
   
