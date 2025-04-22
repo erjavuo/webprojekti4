@@ -108,3 +108,52 @@ button {
 #score {
     margin: 5px;
 }
+
+@media (max-width: 910px) {
+    img {
+        position: relative;
+        display: block;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    img {
+        position: relative;
+        display: block;
+        max-width: 50%;
+    }
+
+    #navbar a {
+        display: inline-block;
+        margin: 35px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 672px) {
+    footer {
+        width: 100%;
+        bottom: 0px;
+    }
+
+    #navbar {
+        width: 100%;
+    }
+
+    #navbar a {
+        margin: 25px;
+    }
+}
+
+@media (max-width: 582px) {
+    #navbar a {
+        margin: 15px;
+    }
+
+    img {
+        position: relative;
+        display: block;
+        max-width: 55%;
+    }
+}
