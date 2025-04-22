@@ -6,10 +6,12 @@ const words = [
 const button = document.getElementById('startButton');
 const buttonNext = document.getElementById('showNextWord');
 const buttonCorrect = document.getElementById('correctGuess');
+const buttonRestart = document.getElementById('restartGame');
 
 button.addEventListener("click", startGame);
 buttonNext.addEventListener("click", showNextWord);
 buttonCorrect.addEventListener("click", correctGuess);
+buttonRestart.addEventListener("click", restartGame);
 
   let availableWords = []; // Tyhjenee sitä mukaa kun sanoja näytetään
   let currentWord = '';
@@ -19,17 +21,22 @@ buttonCorrect.addEventListener("click", correctGuess);
  
   // Function that starts the game
   function startGame(){
+    clearInterval(timerInterval);
+    score = 0;
+    timeLeft = 60;
+    document.getElementById("score").textContent = "Pisteet: 0";
+    availableWords = [...words]; 
+
     document.getElementById("startScreen").style.display = "none";
     document.getElementById("gameScreen").style.display = "block";
     document.getElementById("showNextWord").style.display = "inline-block";
     document.getElementById("correctGuess").style.display = "inline-block";
+    document.getElementById("restartGame").style.display = "none";
 
-    score = 0;
-    timeLeft = 60;
+
     document.getElementById("score").textContent = "Pisteet: 0";
-
-    availableWords = [...words]; // kopioi alkuperäiset sanat
-
+    document.getElementById("timer").textContent = `Aikaa jäljellä: ${timeLeft} sekuntia`;
+  
     startTimer();
     showNextWord();
   }
@@ -45,13 +52,18 @@ buttonCorrect.addEventListener("click", correctGuess);
 
   // function that gets a random word to span element
   function showNextWord() {
-    const word = getRandomWord();
-    if (word === null) {
+    if (availableWords.length === 0) {
       endGame("Kaikki sanat käytetty!");
       return;
     }
-    document.getElementById("randomWord").textContent = word;
+  
+    const index = Math.floor(Math.random() * availableWords.length);
+    const word = availableWords[index];
+    availableWords.splice(index, 1); // Poista sana listasta
+    document.getElementById("word").textContent = word;
   }
+  
+  
 
   // function that adds a point to the score for right answer
   function correctGuess() {
@@ -80,7 +92,12 @@ buttonCorrect.addEventListener("click", correctGuess);
       document.getElementById("showNextWord").style.display = "none";
       document.getElementById("correctGuess").style.display = "none";
       document.getElementById("timer").textContent = `Peli päättyi – pisteet: ${score}`;
+      document.getElementById("restartGame").style.display = "inline-block";
       sessionStorage.setItem("explainGamePoints", score);
   }
   
+  function restartGame() {
+    document.getElementById("restartGame").style.display = "none";
+    startGame();
+  }
   

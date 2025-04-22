@@ -97,6 +97,11 @@ button {
     font-size: 1em;       
 }
 
+#restartGame {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
 #timer {
     margin: 5px;
 }
