@@ -22,6 +22,8 @@ buttonCorrect.addEventListener("click", correctGuess);
   function startGame(){
     document.getElementById("startScreen").style.display = "none";
     document.getElementById("gameScreen").style.display = "block";
+    document.getElementById("showNextWord").style.display = "inline-block";
+    document.getElementById("correctGuess").style.display = "inline-block";
 
     score = 0;
     timeLeft = 60;
