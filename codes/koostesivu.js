@@ -17,6 +17,7 @@ const wordmixGamePoints = sessionStorage.getItem("wordmixGamePoints");
 const whatanimalGamePointsSpan = document.querySelector("#mikaelain-pisteet");
 const whatanimalGamePoints = sessionStorage.getItem("whatanimalgamepoints");
 
+// Points of Veeti's game
 const explainGamePointsSpan = document.querySelector("#selityspeli-pisteet");
 const explainGamePoints = sessionStorage.getItem("explainGamePoints");
 
@@ -48,6 +49,7 @@ if (whatanimalGamePoints !== null) {
     spanForSumOfPoints.textContent = sumOfPoints;
 }
 
+// If points in session storage are not null, add points from session storage to website
 if (explainGamePoints !== null) {
     explainGamePointsSpan.textContent = explainGamePoints;
     sumOfPoints+=Number(explainGamePoints)
