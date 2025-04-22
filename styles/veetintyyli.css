@@ -113,7 +113,7 @@ button {
     img {
         position: relative;
         display: block;
-        max-width: 50%;
+        max-width: 40%;
     }
 }
 
@@ -121,7 +121,7 @@ button {
     img {
         position: relative;
         display: block;
-        max-width: 50%;
+        max-width: 40%;
     }
 
     #navbar a {
