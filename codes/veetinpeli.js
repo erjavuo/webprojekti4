@@ -1,7 +1,6 @@
 const words = [
     "Vuori", "Tunturi", "Föhntuuli", "Aavikko", "Kaupunki", "Maaseutu", "Niagara",
-    "Tulivuori", "Rotko", "Mannerlaatta", "Venetsia", "Eroosio", "Laava", "Tasanko",
-    "Jääkausi", "Kraateri", "Joki", "Lämpövyöhyke", "Koli", "Manner"
+    "Tulivuori", "Rotko", "Mannerlaatta",
   ];
 
 const button = document.getElementById('startButton');
