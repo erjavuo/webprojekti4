@@ -1,0 +1,110 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FEFAE0;
+    font-family: Verdana;
+}
+#navbar {
+    background-color: #A6B37D;
+    padding: 15px;
+}
+
+#navbar a {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: #C0C78C;
+    border-radius: 25px;
+    width: 5em;
+    text-align: center;
+    color: black
+}
+
+#navbar a:hover {
+    background-color: #B99470;
+}
+
+footer {
+    background-color: #A6B37D;
+    padding: 7px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+}
+
+img {
+    position: relative;
+    display: block;
+    max-width: 25%;
+    border: 6px solid;
+    border-radius: 30px;
+    border-color: #A6B37D;
+    margin: auto;
+    top: 50px;
+    }
+
+.etusivukuva{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    
+    
+
+    }
+
+.tekstit{
+    text-align: center;
+    
+
+}
+
+#gameContainer {
+    display: grid;
+    width: 500px;
+    font-family: #fefae0;
+    border: 2px solid;
+    border-color:#A6B37D;
+    justify-content: center;
+    margin: auto;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    padding: 0;
+    font-weight: bold;
+    background-color: #A6B37D;
+}
+
+#gameScreen {
+    display: none;
+}
+
+#startButton {
+    width: 200px;
+    height: 50px;
+    padding: 0;
+    margin: 30px;
+    font-size: 1em;       
+}
+
+#timer {
+    margin: 5px;
+}
+
+#word {
+    margin: 5px;
+}
+
+#score {
+    margin: 5px;
+}
