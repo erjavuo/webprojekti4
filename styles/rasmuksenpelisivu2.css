@@ -109,6 +109,7 @@ padding-left: 35%;
 
 }
 
+
 .play{
 
     display: flex;
@@ -195,7 +196,7 @@ img{
 
     h2{
 
-        font-size: 1.5vh;
+        font-size: 1.9vh;
 
     }
 
@@ -211,9 +212,24 @@ img{
 
     }
 
+    #img1{
+
+        width: 45%;
+
+
+    }
+
+    #img2{
+
+        width: 45%;
+
+    }
+
     .image1{
 
-        padding-left: 15%;
+        padding-left: 7%;
+        width: 80%;
+        
         
         
        
@@ -221,9 +237,10 @@ img{
 
     }
     .image2{
+       width: 80%;
        
-        width: 80%;
-        padding-left: 7%;
+        
+        
 
     }
 
@@ -269,6 +286,7 @@ img{
         font-size: 2vh;
 
     }
+
     #points{
 
         
@@ -277,9 +295,23 @@ img{
 
 
 
-    }.image1{
+    } #img1{
 
-        padding-left: 16%;
+        width: 45%;
+
+
+    }
+
+    #img2{
+
+        width: 45%;
+
+    }
+    
+    
+    .image1{
+
+        padding-left: 10%;
         width: 70%;
        
 
@@ -287,7 +319,7 @@ img{
     }.image2{
        
 
-        padding-left: 9%;
+        padding-left: 3%;
         width: 70%;
 
     }
@@ -316,9 +348,22 @@ img{
 
 
 
-    }.image1{
+    } #img1{
 
-        padding-left: 16%;
+        width: 45%;
+
+
+    }
+
+    #img2{
+
+        width: 45%;
+
+    }
+    
+    .image1{
+
+        padding-left: 10%;
         width: 70%;
        
 
@@ -326,7 +371,7 @@ img{
     }.image2{
        
 
-        padding-left: 9%;
+        padding-left: 3%;
         width: 70%;
 
     }
@@ -354,9 +399,22 @@ img{
 
 
 
-    }.image1{
+    }#img1{
 
-        padding-left: 16%;
+        width: 45%;
+
+
+    }
+
+    #img2{
+
+        width: 45%;
+
+    }
+    
+    .image1{
+
+        padding-left: 10%;
         width: 70%;
        
 
@@ -364,7 +422,7 @@ img{
     }.image2{
        
 
-        padding-left: 9%;
+        padding-left: 3%;
         width: 70%;
 
     }
@@ -393,9 +451,22 @@ img{
 
 
 
-    }.image1{
+    }#img1{
 
-        padding-left: 16%;
+        width: 35%;
+
+
+    }
+
+    #img2{
+
+        width: 35%;
+
+    }
+    
+    .image1{
+
+        padding-left: 11%;
         width: 70%;
        
 
@@ -403,7 +474,7 @@ img{
     }.image2{
        
 
-        padding-left: 9%;
+        padding-left: 4%;
         width: 70%;
 
     }
@@ -433,9 +504,23 @@ img{
 
 
 
-    }.image1{
+    }#img1{
 
-        padding-left: 17%;
+        width: 30%;
+
+
+    }
+
+    #img2{
+
+        width: 30%;
+
+    }
+    
+    
+    .image1{
+
+        padding-left: 14%;
         width: 70%;
        
 
@@ -443,7 +528,7 @@ img{
     }.image2{
        
 
-        padding-left: 10%;
+        padding-left: 7%;
         width: 70%;
 
     }
@@ -471,9 +556,24 @@ img{
 
 
 
-    }.image1{
+    }#img1{
 
-        padding-left: 17%;
+        width: 25%;
+
+
+    }
+
+    #img2{
+
+        width: 25%;
+
+    }
+    
+    
+    
+    .image1{
+
+        padding-left: 16%;
         width: 70%;
        
 
@@ -481,7 +581,7 @@ img{
     }.image2{
        
 
-        padding-left: 10%;
+        padding-left: 9%;
         width: 70%;
 
     }
@@ -510,7 +610,21 @@ img{
 
 
 
-    }.image1{
+    }#img1{
+
+        width: 25%;
+
+
+    }
+
+    #img2{
+
+        width: 25%;
+
+    }
+    
+    
+    .image1{
 
         padding-left: 17%;
         width: 70%;
@@ -549,7 +663,22 @@ img{
 
 
 
-    }.image1{
+    }#img1{
+
+        width: 25%;
+
+
+    }
+
+    #img2{
+
+        width: 25%;
+
+    }
+    
+    
+    
+    .image1{
 
         padding-left: 17%;
         width: 70%;
@@ -590,7 +719,21 @@ img{
 
 
 
-    }.image1{
+    }#img1{
+
+        width: 20%;
+
+
+    }
+
+    #img2{
+
+        width: 20%;
+
+    }
+    
+    
+    .image1{
 
         padding-left: 18%;
         width: 70%;
@@ -629,7 +772,21 @@ img{
 
 
 
-    }.image1{
+    }#img1{
+
+        width: 20%;
+
+
+    }
+
+    #img2{
+
+        width: 20%;
+
+    }
+    
+    
+    .image1{
 
         padding-left: 18%;
         width: 70%;
@@ -669,7 +826,21 @@ img{
 
 
 
-    }.image1{
+    }#img1{
+
+        width: 20%;
+
+
+    }
+
+    #img2{
+
+        width: 20%;
+
+    }
+    
+    
+    .image1{
 
         padding-left: 18%;
         width: 70%;
