@@ -286,7 +286,7 @@ function startScreen(){
 
 
 }
-//Help used from https://stackoverflow.com/questions/67324174/how-can-i-get-the-next-items-of-an-array-after-clicking-on-a-button
+//Help used (probably? I don't remember exactly) from https://stackoverflow.com/questions/67324174/how-can-i-get-the-next-items-of-an-array-after-clicking-on-a-button
 //Written by AmiralBl3ndic https://stackoverflow.com/users/9073639/amiralbl3ndic
 //License CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
 // This function will continue to next category if category index is less than 10, if not it will return back to "linnut" category / index 0
