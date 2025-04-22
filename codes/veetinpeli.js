@@ -91,7 +91,7 @@ buttonRestart.addEventListener("click", restartGame);
     document.getElementById("word").textContent = message;
       document.getElementById("showNextWord").style.display = "none";
       document.getElementById("correctGuess").style.display = "none";
-      document.getElementById("timer").textContent = `Peli päättyi – pisteet: ${score}`;
+      document.getElementById("timer").textContent = `Peli päättyi!`;
       document.getElementById("restartGame").style.display = "inline-block";
       sessionStorage.setItem("explainGamePoints", score);
   }
