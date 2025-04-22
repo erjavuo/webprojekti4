@@ -43,10 +43,6 @@ startgame.addEventListener('click', startScreen);
 
 
 
-
-
-
-
 //Function that will set the h2 element from the html to the category from the category array according the current number of index element
 function setCategories(){
 
@@ -282,9 +278,6 @@ function startScreen(){
     }
 
     
-
-
-
 }
 //Help used (probably? I don't remember exactly) from https://stackoverflow.com/questions/67324174/how-can-i-get-the-next-items-of-an-array-after-clicking-on-a-button
 //Written by AmiralBl3ndic https://stackoverflow.com/users/9073639/amiralbl3ndic
@@ -575,8 +568,6 @@ function CountTries(){
 
     }
 
-
-
 }
 
 startScreen();
@@ -638,6 +629,8 @@ startScreen();
 //CSS "inline-block" value not working with images https://stackoverflow.com/questions/58429261/css-inline-block-value-not-working-with-images
 //Random image javascript https://stackoverflow.com/questions/65657576/random-image-javascript
 //How to display two elements on the same line? https://stackoverflow.com/questions/46747761/how-to-display-two-elements-on-the-same-line
+
+//These should be all references at least I had bookmarked, something may be missing if I have forgotten to bookmark something
 
 
 
