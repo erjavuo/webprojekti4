@@ -12,6 +12,7 @@ button.addEventListener("click", startGame);
 buttonNext.addEventListener("click", showNextWord);
 buttonCorrect.addEventListener("click", correctGuess);
 
+  let availableWords = []; // Tyhjenee sitä mukaa kun sanoja näytetään
   let currentWord = '';
   let score = 0;
   let timeLeft = 60;
@@ -31,8 +32,11 @@ buttonCorrect.addEventListener("click", correctGuess);
 
   // function that gets a random word from the array
   function getRandomWord() {
-    const index = Math.floor(Math.random() * words.length);
-    return words[index];
+    if (availableWords.length === 0) return null;
+    const index = Math.floor(Math.random() * availableWords.length);
+    const word = availableWords[index];
+    availableWords.splice(index, 1); // Poistaa sanan listasta
+    return word;
   }
 
   // function that gets a random word to span element
