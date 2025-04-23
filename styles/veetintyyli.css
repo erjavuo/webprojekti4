@@ -18,7 +18,7 @@ body {
     font-size: 1.5em;
     background-color: #C0C78C;
     border-radius: 25px;
-    width: 5em;
+    width: 6em;
     text-align: center;
     color: black
 }
@@ -29,14 +29,16 @@ body {
 
 footer {
     background-color: #A6B37D;
-    padding: 4px;
-    bottom: 0;
+    padding: 50px;
     position: relative;
-    width: 100%;
+    width: auto;
 }
 
 footer p {
+    position: relative;
     text-align: center;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 img {
@@ -136,7 +138,13 @@ button {
     }
 }
 
-@media (max-width: 672px) {
+@media (max-width: 744px) {
+    #navbar {
+        display: flex;
+    }
+}
+
+@media (max-width: 674px) {
     footer {
         width: 100%;
         bottom: 0px;
@@ -144,6 +152,7 @@ button {
 
     #navbar {
         width: 100%;
+
     }
 
     #navbar a {
