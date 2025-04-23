@@ -96,7 +96,7 @@ buttonRestart.addEventListener("click", restartGame);
       sessionStorage.setItem("explainGamePoints", score);
   }
   
-  // function that restarts the game after pressing "Aloita uudelleens"
+  // function that restarts the game after pressing "Aloita uudelleen"
   function restartGame() {
     document.getElementById("restartGame").style.display = "none";
     startGame();
