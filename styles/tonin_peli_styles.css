@@ -13,7 +13,7 @@ body {
     justify-content: center;
     grid-gap: 16px;
     grid-template-columns: repeat(5,200px);
-    padding-bottom: 2em;
+    padding-top: 5em;
 }
 
 #game-container.hidden {
