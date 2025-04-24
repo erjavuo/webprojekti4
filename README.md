@@ -1,6 +1,7 @@
 # webprojekti-group4
 Finnish nature themed site with games
-Link to project https://www.students.oamk.fi/~t3vuer00/web-projekti-ryhma4/
+
+Link to project: https://www.students.oamk.fi/~t3vuer00/web-projekti-ryhma4/
 
 Contributors:
 Erja Vuorio Git-tunnus erjavuo
