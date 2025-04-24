@@ -12,4 +12,10 @@ Toni Pekkala Git-tunnus tonipekkala24
 
 Used: HTML, CSS, JavaScript
 
-
+## Installation
+1. Clone repo  
+    ```
+    git clone https://github.com/erjavuo/webprojekti4.git
+    ```
+## Usage
+Open index.html in browser.
